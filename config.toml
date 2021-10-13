@@ -1,0 +1,7 @@
+theme = "hugo-eureka"
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+relativeurls = true
+author = "Parth Khare"
+
