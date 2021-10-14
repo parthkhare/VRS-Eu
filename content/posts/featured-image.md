@@ -1,5 +1,5 @@
 ---
-title: Featured Image
+title: About NTL
 description: Post with featured image.
 toc: true
 authors:
