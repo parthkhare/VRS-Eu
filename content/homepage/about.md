@@ -1,11 +1,11 @@
 ---
 title: Nightlights 
 draft: false
-role: CGD
+role: Parth
 avatar: images/IndiaNL.png
 bio: VIIRS:Tracking Economic Activity 
 organization:
-  name: Source: EOD
+  name: EOD
   url: https://eogdata.mines.edu/nighttime_light/
 social:
   - icon: envelope
