@@ -35,7 +35,7 @@ _ Biophysical/Seaonal Noise
 
 DMSP Unit: Digital Number (DN) is a ratio of Upwelling and Downwelling Radiance therefore it is a unitless ratio measuring net reflectance
 
-images/DMSP.png
+![DMSP](images/DMSP.png)
 
 ## Visible Infrared Imaging Radiometer Suite (VIIRS) - Monthly/Annually 2012- 
 
@@ -47,7 +47,8 @@ VIIRS Day/Night Band (DNB) on-board the SUOMI-NPP satellite has a finer ground f
 VIIRS Unit: DNB Radaiance captures radiance measured in watts/cm2/sterdians
 multiplying the pixel value by 10^9 gives radiance in units of W/cm2-sr 
 
-images/VIIRS.png
+![VIIRS](images/VIIRS.png)
+
 
 ## Cleaning
 
