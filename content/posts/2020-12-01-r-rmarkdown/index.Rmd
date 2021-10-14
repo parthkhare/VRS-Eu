@@ -14,4 +14,6 @@ library(ggplot2); library(data.table);library(fixest)
 options(scipen=99)
 ```
 
+![](/Users/parthkhare/Desktop/CGD/Projects/Globalsat/VRS-Eu/static/gdpntl/HWS1_Aug21.jpg)
+
 
