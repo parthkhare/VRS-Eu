@@ -142,7 +142,10 @@ knitr::include_graphics("/static/gdpntl/IMF_WEO_NL.png",error=FALSE)
 ```
 
 ## Long difference: Quarter
-![](/static/gdpntl/Longdiff_quar.png)
+![](/Users/parthkhare/Desktop/CGD/Projects/Globalsat/VRS-Eu/static/gdpntl/Longdiff_quar.png)
+
+<!-- rmarkdown v1 -->
+![](../static/gdpntl/Longdiff_quar.png)
 
 ```{r, echo=FALSE, fig.cap="A caption", out.width = '100%'}
 # knitr::include_graphics("/Users/parthkhare/Desktop/CGD/Projects/Globalsat/VRS-Eu/themes/hugo-eureka/assets/images/GNcharts/Longdiff_quar.png")
