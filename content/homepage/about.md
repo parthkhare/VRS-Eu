@@ -13,7 +13,7 @@ social:
     url: mailto:example@example.com
   - icon: twitter
     iconPack: fab
-    url: https://twitter.com/parthakhare
+    url: https://twitter.com/parthakhare/
   - icon: github
     iconPack: fab
     url: https://parthkhare.github.io/
