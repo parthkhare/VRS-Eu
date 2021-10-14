@@ -35,7 +35,7 @@ _ Biophysical/Seaonal Noise
 
 DMSP Unit: Digital Number (DN) is a ratio of Upwelling and Downwelling Radiance therefore it is a unitless ratio measuring net reflectance
 
-![DMSP](images/DMSP.png)
+![DMSP](https://github.com/parthkhare/VRS-Eu/blob/main/themes/hugo-eureka/assets/images/DMSP.png)
 
 ## Visible Infrared Imaging Radiometer Suite (VIIRS) - Monthly/Annually 2012- 
 
