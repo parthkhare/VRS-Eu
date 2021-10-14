@@ -1,5 +1,5 @@
 ---
-title: global-trends
+title: Global-trends
 author: Parth
 date: '2021-10-14'
 slug: []
@@ -21,8 +21,9 @@ library(ggplot2); library(data.table);library(fixest)
 options(scipen=99)
 ```
 
-# Distribution and trends
+## Global: Growth and NTL levels (2012-2020)
 Trends from VIIRS annual product released recently for 2012-2020.
+On an aggregate level, even the GDP (WDI) does not seem to fall between 2019-2020
 
 ```{r, echo=F, warning=F, message=F}
 load('/Users/parthkhare/Desktop/CGD/Projects/Globalsat/data/HWS & country level/country_year regdata/Ctyr_Jul1_BaseregHML.RData')
@@ -42,10 +43,89 @@ brglb <- br[,.(sum_pix = sum(sum_pix, na.rm=T), pol_area = sum(pol_area, na.rm=T
 # Global trends: GDP
 ggplot(brglb, aes(y=log(WDI), x=year, color=incat, group=incat)) + 
   geom_point(size=0.5) + geom_smooth(size=0.5,se=F) + 
-  ggtitle('Annual GDP by country groups') + ylab('log WDI') + xlab('years') 
+  ggtitle('Annual GDP by country groups') + ylab('log sum of WDI') + xlab('years') 
 
-# Global trends: GDP
+# Global trends: NTL
 ggplot(brglb, aes(y=log(sum_pix), x=year, color=incat, group=incat)) + 
   geom_point(size=0.5) + geom_smooth(size=0.5,se=F) + 
   ggtitle('Annual NTL by country groups') + ylab('log VIIRS') + xlab('years') 
 ```
+
+
+
+
+## Quarter wise correlations
+
+
+```{r, echo=F, warning=F, message=F}
+source("http://peterhaschke.com/Code/multiplot.R")
+load('/Users/parthkhare/Desktop/CGD/Projects/Globalsat/data/extracted viirs/compiled global ntl/Global GDP quarter/IMFGDP_VRSmon_q.RData')
+dim(ggdp)
+
+
+
+# correlation plots: Section I
+gyp <- subset(ggdp, year==c('2013','2014','2015'))
+# corr plots by yq
+cats <- unique(gyp$year_quar)
+cats <- sort(cats)
+plot_corr <- list()
+for(i in 1: length(cats))
+{
+  dts <- subset(gyp, year_quar == cats[i])
+  cp <- ggplot(dts, aes(log(sum_pix), log(nom_gdp))) + geom_point() +
+    # geom_point(aes(colour=factor(dts$iso3c))) +
+    xlab('') + ylab('') +
+    theme_minimal() + ggtitle(paste0('Corr:',dts$year_quar)) +
+    geom_smooth(method=lm, se=F, linetype="dashed",color="red", size=0.5) +
+    theme(legend.position = "none")
+  cp <- cp + scale_alpha(guide = 'none')
+  plot_corr[[i]] <- cp
+}
+print(multiplot(plotlist = plot_corr, cols = 2))
+
+# correlation plots: Section II
+gyp <- subset(ggdp, year==c('2016','2017','2018'))
+# corr plots by yq
+cats <- unique(gyp$year_quar)
+cats <- sort(cats)
+plot_corr <- list()
+for(i in 1: length(cats))
+{
+  dts <- subset(gyp, year_quar == cats[i])
+  cp <- ggplot(dts, aes(log(sum_pix), log(nom_gdp))) + geom_point() +
+    # geom_point(aes(colour=factor(dts$iso3c))) +
+    xlab('') + ylab('') +
+    theme_minimal() + ggtitle(paste0('Corr:',dts$year_quar)) +
+    geom_smooth(method=lm, se=F, linetype="dashed",color="red", size=0.5) +
+    theme(legend.position = "none")
+  cp <- cp + scale_alpha(guide = 'none')
+  plot_corr[[i]] <- cp
+}
+print(multiplot(plotlist = plot_corr, cols = 2))
+
+# correlation plots: Section III
+gyp <- subset(ggdp, year==c('2019','2020'))
+# corr plots by yq
+cats <- unique(gyp$year_quar)
+cats <- sort(cats)
+plot_corr <- list()
+for(i in 1: length(cats))
+{
+  dts <- subset(gyp, year_quar == cats[i])
+  cp <- ggplot(dts, aes(log(sum_pix), log(nom_gdp))) + geom_point() +
+    # geom_point(aes(colour=factor(dts$iso3c))) +
+    xlab('') + ylab('') +
+    theme_minimal() + ggtitle(paste0('Corr:',dts$year_quar)) +
+    geom_smooth(method=lm, se=F, linetype="dashed",color="red", size=0.5) +
+    theme(legend.position = "none")
+  cp <- cp + scale_alpha(guide = 'none')
+  plot_corr[[i]] <- cp
+}
+print(multiplot(plotlist = plot_corr, cols = 2))
+
+```
+
+
+
+
