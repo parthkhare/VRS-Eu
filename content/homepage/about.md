@@ -51,11 +51,11 @@ Nighttime lights can turn out to be a useful proxy of economic activity as light
 ## Index
 
 What is done
-- Global trends
-- Regressions (Attenuation)
+- [Global trends](https://nightlights-devecon.netlify.app/posts/2021-10-14-global-trends/)
+- [Regressions-Attenuation](https://nightlights-devecon.netlify.app/posts/2020-12-01-r-rmarkdown/)
   - HWS
-  - HWS: HMC/LMC
   - Goldberg
+  - HMC/LMC
 - Covid
 - Appendix research
   - Colombia

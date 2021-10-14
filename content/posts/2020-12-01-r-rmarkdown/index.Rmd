@@ -31,14 +31,20 @@ While HWS and AUS do not differ much in sum of lights, HWS uses different polygo
 #### Goldberg
 
 ![](/gdpntl/Goldberg_Aug21.png)
+## Discussion
 
 #### Takeaway
-- Considerable attenuation of the link between night lights and GDP from DMSP period to VIRS period for both level and growth regressions; open question is whether this is due to the nature of satellite measurement or some change in the underlying relationship between satellites and GDP
-  - Agree on attenuation, but I think there’s evidence here that it’s ‘real’ and not just due to the satellite change, since we find VIIRS>=DMSP in the overlapping years.
+- A: Considerable attenuation of the link between night lights and GDP from DMSP period to VIRS period for both level and growth regressions; open question is whether this is due to the nature of satellite measurement or some change in the underlying relationship between satellites and GDP
+  - J: Agree on attenuation, but I think there’s evidence here that it’s ‘real’ and not just due to the satellite change, since we find VIIRS>=DMSP in the overlapping years.
   
-- DMSP (Goldberg) never tracked GDP either in level or growth regressions for HIC and UMIC; this is also true for VIRS in level regressions
+- A: DMSP (Goldberg) never tracked GDP either in level or growth regressions for HIC and UMIC; this is also true for VIRS in level regressions
 Bottom line: night lights are a bad proxy where GDP data are reliable (rich countries); and a decent-ish proxy exactly where GDP data are less reliable (poor countries). There are other interpretations of course
- - Mystery: I agree this “bottom line” matches the table, but it’s the literal opposite of the Henderson et al AER paper. Seems we need to probe a bit more there.
+ - J: Mystery- I agree this “bottom line” matches the table, but it’s the literal opposite of the Henderson et al AER paper. Seems we need to probe a bit more there.
 
-- VIRS correlations are so weak as to make me wonder how useful they are. 
-  - Optimism: Yeah, they could be better. But ultimately I think it’s a question of whether we can find significant differences when we start testing hypotheses. E.g., if we hypothesize bigger post-COVID growth deterioration in poorer countries compared to richer ones, can we find that? If we hypothesize a negative (or positive?) association of growth with NPIs, can we find that? If so, great. If not, then yes, could be a measurement issue. But I think the task is to formulate those hypotheses now!
+- A: VIRS correlations are so weak as to make me wonder how useful they are. 
+  - J: Optimism- Yeah, they could be better. But ultimately I think it’s a question of whether we can find significant differences when we start testing hypotheses. E.g., if we hypothesize bigger post-COVID growth deterioration in poorer countries compared to richer ones, can we find that? If we hypothesize a negative (or positive?) association of growth with NPIs, can we find that? If so, great. If not, then yes, could be a measurement issue. But I think the task is to formulate those hypotheses now!
+  
+  
+#### Follow-up
+  
+
