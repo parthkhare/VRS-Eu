@@ -48,18 +48,33 @@ widget:
 Nighttime lights can turn out to be a useful proxy of economic activity as lights emanating from residential settlements and commercial establishments contain “signatures” of human activity. Since 2012, nightlight recordings obtained from the Visible Infrared Imaging Radiometer Suite (VIIRS) on board the SUOMI-NPP satellite, addressed many of the drawbacks inherent in the earlier vintage of data obtained from the US Air Force Defense Meteorological Satellite Program— Operational Linescan System (DMSP-OLS). Still, we show that refinements are required in the ‘raw’ data obtained from the VIIRS prior to its use in economic analysis, and especially so for studying the change in economic activity over time.
 
 
-## Summary of work done so far  
+## Index
 
-Nunc pellentesque vitae:
-- Analysis of global trends
+What is done
+- Global trends
 - Regressions (Attenuation)
   - HWS
   - HWS: HMC/LMC
   - Goldberg
 - Covid
+- Appendix research
+  - Colombia
+  - LULC data
 
-Donec mollis sollicitudin:
-- Nunc dictum purus ornare purus consectetur, eu pellentesque massa ullamcorper.
-- Aliquam eu leo vitae justo aliquam tincidunt.
-- Fusce non massa id augue interdum feugiat sed et nulla.
-- Vivamus molestie augue in tristique laoreet.
+What next
+- Cleaning nightlights
+  - Variant creation
+  - Addressing negative values
+  - India (WB work recap)
+  - Cleaning world bank
+- Scale: micro vs macro
+- Different specifications ?
+- What final form could look like ?
+
+
+## About Nightlights
+- DMSP-VIIRS
+- Source of NTL (prepared and raw)
+- Literature
+
+
