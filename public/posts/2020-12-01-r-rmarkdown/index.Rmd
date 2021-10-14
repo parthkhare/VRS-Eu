@@ -1,0 +1,17 @@
+---
+title: "HWS regressions"
+author: "Parth"
+date: 2021-10-02T21:13:14-05:00
+categories: ["R"]
+tags: ["R Markdown", "plot", "regression"]
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+library(ggplot2); library(data.table);library(fixest)
+options(scipen=99)
+```
+
+

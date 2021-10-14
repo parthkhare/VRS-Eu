@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on VIIRS-Econ</title>
+    <link>/posts/</link>
+    <description>Recent content in Posts on VIIRS-Econ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 14 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Global-trends</title>
+      <link>/posts/2021-10-14-global-trends/</link>
+      <pubDate>Thu, 14 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2021-10-14-global-trends/</guid>
+      <description>   Global: Growth and NTL levels (2012-2020) Trends from VIIRS annual product released recently for 2012-2020. On an aggregate level, even the GDP (WDI) does not seem to fall between 2019-2020
+  Quarter wise correlations Yaxis-IMF quarter wise GDP
+## [1] 1990 11 ## NULL ## NULL ## NULL   Long difference: Annual  Figure 1: A caption   Long difference: Quarter  Figure 2: A caption   </description>
+    </item>
+    
+    <item>
+      <title>HWS regressions</title>
+      <link>/posts/2020-12-01-r-rmarkdown/</link>
+      <pubDate>Sat, 02 Oct 2021 21:13:14 -0500</pubDate>
+      
+      <guid>/posts/2020-12-01-r-rmarkdown/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Nightlights Products &amp; Limitations</title>
+      <link>/posts/featured-image/</link>
+      <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/featured-image/</guid>
+      <description>&lt;p&gt;Raw Nightlights data is available in raster imagery at NOAA, EOD, where the world is split into 6 tiles&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Diagram Support</title>
+      <link>/posts/diagram-support/</link>
+      <pubDate>Wed, 31 Mar 2021 13:11:22 +0800</pubDate>
+      
+      <guid>/posts/diagram-support/</guid>
+      <description>&lt;p&gt;Eureka supports the rendering of diagrams by using Mermaid.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Math Support</title>
+      <link>/posts/math-support/</link>
+      <pubDate>Fri, 20 Nov 2020 22:52:56 +0800</pubDate>
+      
+      <guid>/posts/math-support/</guid>
+      <description>&lt;p&gt;Eureka supports the rendering of mathematical formulas by using KaTeX.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Markdown Syntax Guide</title>
+      <link>/posts/markdown-syntax/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/markdown-syntax/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Placeholder Text</title>
+      <link>/posts/placeholder-text/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/placeholder-text/</guid>
+      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Emoji Support</title>
+      <link>/posts/emoji-support/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/emoji-support/</guid>
+      <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

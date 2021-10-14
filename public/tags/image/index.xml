@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>image on VIIRS-Econ</title>
+    <link>/tags/image/</link>
+    <description>Recent content in image on VIIRS-Econ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 01 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/image/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nightlights Products &amp; Limitations</title>
+      <link>/posts/featured-image/</link>
+      <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/featured-image/</guid>
+      <description>&lt;p&gt;Raw Nightlights data is available in raster imagery at NOAA, EOD, where the world is split into 6 tiles&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
