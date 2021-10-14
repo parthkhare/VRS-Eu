@@ -6,32 +6,39 @@ categories: ["R"]
 tags: ["R Markdown", "plot", "regression"]
 ---
 
+
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE)
+library(ggplot2); library(data.table);library(fixest)
+options(scipen=99)
 ```
 
-# R Markdown
+# Distribution and trends
+Trends from VIIRS annual product released recently for 2012-2020.
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+```{r, echo=F, warning=F, message=F}
+load('/Users/parthkhare/Desktop/CGD/Projects/Globalsat/data/HWS & country level/country_year regdata/Ctyr_Jul1_BaseregHML.RData')
 
-You can embed an R code chunk like this:
 
-```{r cars}
-summary(cars)
-fit <- lm(dist ~ speed, data = cars)
-fit
-```
+# Aggregate data to world
+br <- data.table(br)
+brglb <- br[,.(sum_pix = sum(sum_pix, na.rm=T), pol_area = sum(pol_area, na.rm=T),
+                       sum_pix_clb = sum(sum_pix_clb, na.rm=T), 
+                       pos_sumpx = sum(pos_sumpx, na.rm=T),
+                       imf_rgdp_lcu = sum(imf_rgdp_lcu, na.rm=T), 
+                       pwt_rgdpna = sum(pwt_rgdpna, na.rm=T),
+                       WDI = sum(WDI, na.rm=T), 
+                       ox_anrgdp_lcu = sum(ox_anrgdp_lcu, na.rm=T)),
+                    by = .(incat,year)]
 
-# Including Plots
+# Global trends: GDP
+ggplot(brglb, aes(y=log(WDI), x=year, color=incat, group=incat)) + 
+  geom_point(size=0.5) + geom_smooth(size=0.5,se=F) + 
+  ggtitle('Annual GDP by country groups') + ylab('log WDI') + xlab('years') 
 
-You can also embed plots. See Figure \@ref(fig:pie) for example:
-
-```{r pie, fig.cap='A fancy pie chart.', tidy=FALSE}
-par(mar = c(0, 1, 0, 1))
-pie(
-  c(280, 60, 20),
-  c('Sky', 'Sunny side of pyramid', 'Shady side of pyramid'),
-  col = c('#0292D8', '#F7EA39', '#C4B632'),
-  init.angle = -50, border = NA
-)
+# Global trends: GDP
+ggplot(brglb, aes(y=log(sum_pix), x=year, color=incat, group=incat)) + 
+  geom_point(size=0.5) + geom_smooth(size=0.5,se=F) + 
+  ggtitle('Annual NTL by country groups') + ylab('log VIIRS') + xlab('years') 
 ```
