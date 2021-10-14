@@ -75,7 +75,7 @@ plot_corr <- list()
 for(i in 1: length(cats))
 {
   dts <- subset(gyp, year_quar == cats[i])
-  cp <- ggplot(dts, x=aes(log(sum_pix), y=log(nom_gdp))) + geom_point() +
+  cp <- ggplot(dts, aes(x=log(sum_pix), y=log(nom_gdp))) + geom_point() +
     # geom_point(aes(colour=factor(dts$iso3c))) +
     xlab('') + ylab('') +
     theme_minimal() + ggtitle(paste0('Corr:',dts$year_quar)) +
@@ -84,7 +84,7 @@ for(i in 1: length(cats))
   cp <- cp + scale_alpha(guide = 'none')
   plot_corr[[i]] <- cp
 }
-print(multiplot(plotlist = plot_corr, cols = 4))
+print(multiplot(plotlist = plot_corr, cols = 3))
 
 # correlation plots: Section II
 gyp <- subset(ggdp, year==c('2016','2018'))
@@ -95,7 +95,7 @@ plot_corr <- list()
 for(i in 1: length(cats))
 {
   dts <- subset(gyp, year_quar == cats[i])
-  cp <- ggplot(dts, x=aes(log(sum_pix), y=log(nom_gdp))) + geom_point() +
+  cp <- ggplot(dts, aes(x=log(sum_pix), y=log(nom_gdp))) + geom_point() +
     # geom_point(aes(colour=factor(dts$iso3c))) +
     xlab('') + ylab('') +
     theme_minimal() + ggtitle(paste0('Corr:',dts$year_quar)) +
@@ -104,7 +104,7 @@ for(i in 1: length(cats))
   cp <- cp + scale_alpha(guide = 'none')
   plot_corr[[i]] <- cp
 }
-print(multiplot(plotlist = plot_corr, cols = 4))
+print(multiplot(plotlist = plot_corr, cols = 3))
 
 # correlation plots: Section III
 gyp <- subset(ggdp, year==c('2019','2020'))
@@ -115,7 +115,7 @@ plot_corr <- list()
 for(i in 1: length(cats))
 {
   dts <- subset(gyp, year_quar == cats[i])
-  cp <- ggplot(dts, x=aes(log(sum_pix), y=log(nom_gdp))) + geom_point() +
+  cp <- ggplot(dts, aes(x=log(sum_pix), y=log(nom_gdp))) + geom_point() +
     # geom_point(aes(colour=factor(dts$iso3c))) +
     xlab('') + ylab('') +
     theme_minimal() + ggtitle(paste0('Corr:',dts$year_quar)) +
@@ -124,7 +124,7 @@ for(i in 1: length(cats))
   cp <- cp + scale_alpha(guide = 'none')
   plot_corr[[i]] <- cp
 }
-print(multiplot(plotlist = plot_corr, cols = 4))
+print(multiplot(plotlist = plot_corr, cols = 3))
 
 ```
 
@@ -132,15 +132,15 @@ print(multiplot(plotlist = plot_corr, cols = 4))
 &nbsp;
 
 
-## Long difference: HWS style
+## Long difference: Annual
 
+```{r, echo=FALSE, fig.cap="A caption", out.width = '100%'}
+knitr::include_graphics("/Users/parthkhare/Desktop/CGD/Projects/Globalsat/VRS-Eu/themes/hugo-eureka/assets/images/GNcharts/IMF_WEO_NL.png")
+```
 
-## Quarter wise correlations: IMF GDP
+## Long difference: Quarters
 
-```{r, echo=F, warning=F, message=F}
-source("http://peterhaschke.com/Code/multiplot.R")
-load('/Users/parthkhare/Desktop/CGD/Projects/Globalsat/data/extracted viirs/compiled global ntl/Global GDP quarter/IMFGDP_VRSmon_q.RData')
-dim(ggdp)
+```{r, echo=FALSE, fig.cap="A caption", out.width = '100%'}
+knitr::include_graphics("/Users/parthkhare/Desktop/CGD/Projects/Globalsat/VRS-Eu/themes/hugo-eureka/assets/images/GNcharts/Longdiff_quar.png")
 
-
-
+```
