@@ -1,9 +1,9 @@
 ---
 title: About Nightlights
-description: Post with featured image.
+description: DMSP (1992-2012), VIIRS (2012-) and other prepared products
 toc: true
 authors:
-  - Example Author
+  - Parth Khare
 tags:
   - image
 categories:
