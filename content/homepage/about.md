@@ -1,7 +1,7 @@
 ---
 title: Nightlights 
 draft: false
-role: CGDev
+role: Parth
 avatar: images/IndiaNL.png
 bio: VIIRS:Tracking Economic Activity 
 organization:
@@ -16,7 +16,7 @@ social:
     url: https://example.com/
   - icon: github
     iconPack: fab
-    url: https://example.com/
+    url: https://parthkhare.github.io/
 
 weight: 1
 widget:
