@@ -4,5 +4,5 @@ languageCode = 'en-us'
 title = 'My New Hugo Site'
 canonifyurls = true
 relativeurls = true
-
+markup.goldmark.renderer.unsafe = true
 
