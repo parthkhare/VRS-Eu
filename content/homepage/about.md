@@ -1,5 +1,5 @@
 ---
-title: VIIRS-Nightlights 
+title: Nightlights: Everything you wanted to know but couldn't google scholar 
 draft: false
 role: CGDev
 avatar: images/India NL.png
