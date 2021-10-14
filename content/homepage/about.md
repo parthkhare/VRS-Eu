@@ -5,7 +5,7 @@ role: Parth
 avatar: images/IndiaNL.png
 bio: VIIRS:Tracking Economic Activity 
 organization:
-  name: NOAA Source
+  name: Source: EOD
   url: https://eogdata.mines.edu/nighttime_light/
 social:
   - icon: envelope
@@ -13,7 +13,7 @@ social:
     url: mailto:example@example.com
   - icon: twitter
     iconPack: fab
-    url: https://example.com/
+    url: https://twitter.com/parthakhare
   - icon: github
     iconPack: fab
     url: https://parthkhare.github.io/
