@@ -9,6 +9,36 @@ tags: ["R Markdown", "plot", "regression"]
 <script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
-<p>Regression
-<img src="/gdpntl/HWS1_Aug21.jpg" />
-<!-- ![](/Users/parthkhare/Desktop/CGD/Projects/Globalsat/VRS-Eu/static/gdpntl/HWS1_Aug21.jpg) --></p>
+<div id="regression-background-hwsgoldberg" class="section level3">
+<h3>Regression Background: HWS/Goldberg</h3>
+<p>Used are 3 different measures of DMSP, AUS, HWS and Goldberg. AUS DMSP was considered for benchmarking also because both HWS and Goldberg do not have DMSP for 2013.
+The difference between them comes from the way they have been aggregated as well as the polygon area (denominator).</p>
+<p>While HWS and AUS do not differ much in sum of lights, HWS uses different polygon area for deflation. Goldberg sum of lights DMSP differs most from HWS and AUS, and was used for benchmarking her results. The source for the difference seems to arise from different inter calibrated DMSP satellites (due to known sensor degradation issues)</p>
+<div id="hws" class="section level4">
+<h4>HWS</h4>
+<p><img src="/gdpntl/HWS1_Aug21.jpg" /></p>
+<!--  -->
+<!--  -->
+<p> </p>
+</div>
+<div id="goldberg" class="section level4">
+<h4>Goldberg</h4>
+<p><img src="/gdpntl/Goldberg_Aug21.png" /></p>
+</div>
+<div id="takeaway" class="section level4">
+<h4>Takeaway</h4>
+<ul>
+<li><p>Considerable attenuation of the link between night lights and GDP from DMSP period to VIRS period for both level and growth regressions; open question is whether this is due to the nature of satellite measurement or some change in the underlying relationship between satellites and GDP</p>
+<ul>
+<li>Agree on attenuation, but I think there’s evidence here that it’s ‘real’ and not just due to the satellite change, since we find VIIRS&gt;=DMSP in the overlapping years.</li>
+</ul></li>
+<li><p>DMSP (Goldberg) never tracked GDP either in level or growth regressions for HIC and UMIC; this is also true for VIRS in level regressions
+Bottom line: night lights are a bad proxy where GDP data are reliable (rich countries); and a decent-ish proxy exactly where GDP data are less reliable (poor countries). There are other interpretations of course</p></li>
+<li><p>Mystery: I agree this “bottom line” matches the table, but it’s the literal opposite of the Henderson et al AER paper. Seems we need to probe a bit more there.</p></li>
+<li><p>VIRS correlations are so weak as to make me wonder how useful they are.</p>
+<ul>
+<li>Optimism: Yeah, they could be better. But ultimately I think it’s a question of whether we can find significant differences when we start testing hypotheses. E.g., if we hypothesize bigger post-COVID growth deterioration in poorer countries compared to richer ones, can we find that? If we hypothesize a negative (or positive?) association of growth with NPIs, can we find that? If so, great. If not, then yes, could be a measurement issue. But I think the task is to formulate those hypotheses now!</li>
+</ul></li>
+</ul>
+</div>
+</div>
