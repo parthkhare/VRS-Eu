@@ -134,17 +134,20 @@ print(multiplot(plotlist = plot_corr, cols = 3))
 
 ## Long difference: Annual
 
+[Annual](https://github.com/parthkhare/VRS-Eu/blob/main/themes/hugo-eureka/assets/images/GNcharts/IMF_WEO_NL.png/)
+
 ```{r, echo=FALSE, fig.cap="A caption", out.width = '100%'}
 knitr::include_graphics("/Users/parthkhare/Desktop/CGD/Projects/Globalsat/VRS-Eu/themes/hugo-eureka/assets/images/GNcharts/IMF_WEO_NL.png")
 
-knitr::include_graphics("https://github.com/parthkhare/VRS-Eu/blob/main/themes/hugo-eureka/assets/images/GNcharts/IMF_WEO_NL.png")
+knitr::include_graphics(https://github.com/parthkhare/VRS-Eu/blob/main/themes/hugo-eureka/assets/images/GNcharts/IMF_WEO_NL.png/)
 ```
 
 ## Long difference: Quarters
+[Quarters](https://github.com/parthkhare/VRS-Eu/blob/main/themes/hugo-eureka/assets/images/GNcharts/Longdiff_quar.png)
 
 ```{r, echo=FALSE, fig.cap="A caption", out.width = '100%'}
 knitr::include_graphics("/Users/parthkhare/Desktop/CGD/Projects/Globalsat/VRS-Eu/themes/hugo-eureka/assets/images/GNcharts/Longdiff_quar.png")
 
-knitr::include_graphics("https://github.com/parthkhare/VRS-Eu/blob/main/themes/hugo-eureka/assets/images/GNcharts/Longdiff_quar.png/")
+knitr::include_graphics(https://github.com/parthkhare/VRS-Eu/blob/main/themes/hugo-eureka/assets/images/GNcharts/Longdiff_quar.png)
 
 ```
