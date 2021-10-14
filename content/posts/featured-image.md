@@ -1,6 +1,6 @@
 ---
-title: About Nightlights
-description: Products (DMSP/VIIRS) 
+title: Featured Image
+description: Post with featured image.
 toc: true
 authors:
   - Example Author
