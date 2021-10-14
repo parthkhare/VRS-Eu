@@ -1,5 +1,5 @@
 ---
-title: Nightlights Products and intrinsic limitations
+title: Nightlights Products & Limitations
 description: Translating remote sensing for researchers
 toc: true
 authors:
