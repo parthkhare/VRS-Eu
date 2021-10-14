@@ -12,7 +12,7 @@ series:
   - Themes Guide
 date: '2020-05-26'
 lastmod: '2020-05-26'
-featuredImage: images/NTL grid tiles.png
+featuredImage: images/icon.png
 draft: false
 ---
 
