@@ -1,8 +1,8 @@
 ---
-title: Nightlights: Everything you wanted to know but couldn't google scholar 
+title: VIIRS-Nightlights 
 draft: false
 role: CGDev
-avatar: images/India NL.png
+avatar: images/icon.png
 bio: Tracking economic acitivity from VIIRS: 2012-2020
 organization:
   name: NOAA Source
