@@ -1,7 +1,7 @@
 theme = "hugo-eureka"
 baseURL = '/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Nightlights & Economic Activity'
 canonifyurls = true
 relativeurls = true
 markup.goldmark.renderer.unsafe = true

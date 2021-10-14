@@ -2,21 +2,21 @@
 title: VIIRS-Nightlights 
 draft: false
 role: CGDev
-avatar: images/icon.png
-bio: Summary of nighlights work done
+avatar: images/India NL.png
+bio: Tracking economic acitivity from VIIRS: 2012-2020
 organization:
   name: NOAA Source
   url: https://eogdata.mines.edu/nighttime_light/
 social:
   - icon: envelope
     iconPack: fas
-    url: mailto:example@example.com
+    url: mailto:pkhare@cgdev.org
   - icon: twitter
     iconPack: fab
-    url: https://example.com/
+    url: https://twitter.com/parthakhare?lang=en
   - icon: github
     iconPack: fab
-    url: https://example.com/
+    url: https://parthkhare.github.io/
 
 weight: 1
 widget:
