@@ -138,7 +138,7 @@ print(multiplot(plotlist = plot_corr, cols = 3))
 ```{r, echo=FALSE, fig.cap="A caption", out.width = '100%'}
 # knitr::include_graphics("/Users/parthkhare/Desktop/CGD/Projects/Globalsat/VRS-Eu/themes/hugo-eureka/assets/images/GNcharts/IMF_WEO_NL.png")
 
-knitr::include_graphics("themes/hugo-eureka/assets/images/GNcharts/IMF_WEO_NL.png",error=FALSE)
+knitr::include_graphics("/themes/hugo-eureka/assets/images/GNcharts/IMF_WEO_NL.png",error=FALSE)
 ```
 
 ## Long difference: Quarters
@@ -146,5 +146,5 @@ knitr::include_graphics("themes/hugo-eureka/assets/images/GNcharts/IMF_WEO_NL.pn
 ```{r, echo=FALSE, fig.cap="A caption", out.width = '100%'}
 # knitr::include_graphics("/Users/parthkhare/Desktop/CGD/Projects/Globalsat/VRS-Eu/themes/hugo-eureka/assets/images/GNcharts/Longdiff_quar.png")
 
-knitr::include_graphics("themes/hugo-eureka/assets/images/GNcharts/Longdiff_quar.png",error=F)
+knitr::include_graphics("/themes/hugo-eureka/assets/images/GNcharts/Longdiff_quar.png",error=F)
 ```
