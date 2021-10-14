@@ -15,13 +15,9 @@ options(scipen=99)
 ```
 
 Regression
+![](/gdpntl/HWS1_Aug21.jpg)
+<!-- ![](/Users/parthkhare/Desktop/CGD/Projects/Globalsat/VRS-Eu/static/gdpntl/HWS1_Aug21.jpg) -->
 
-![](/Users/parthkhare/Desktop/CGD/Projects/Globalsat/VRS-Eu/static/gdpntl/HWS1_Aug21.jpg)
 
-
-```{r, echo=FALSE, fig.cap="A", out.width = '100%'}
-library(knitr)
-knitr::include_graphics("/static/gdpntl/IMF_WEO_NL.png",error=FALSE)
-```
 
 

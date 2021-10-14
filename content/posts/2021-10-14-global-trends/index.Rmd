@@ -133,25 +133,11 @@ print(multiplot(plotlist = plot_corr, cols = 3))
 
 
 ## Long difference: Annual
-<!-- ![](/Users/parthkhare/Desktop/CGD/Projects/Globalsat/VRS-Eu/static/gdpntl/IMF_WEO_NL.png) -->
 
-![](/figure-html/IMF_WEO_NL1.png)
-
-
-```{r, echo=FALSE, fig.cap="A caption", out.width = '100%'}
-# knitr::include_graphics("/Users/parthkhare/Desktop/CGD/Projects/Globalsat/VRS-Eu/themes/hugo-eureka/assets/images/GNcharts/IMF_WEO_NL.png")
-
-knitr::include_graphics("/static/gdpntl/IMF_WEO_NL.png",error=FALSE)
-```
+![](/gdpntl/IMF_WEO_NL.png)
 
 ## Long difference: Quarter
-![](/Users/parthkhare/Desktop/CGD/Projects/Globalsat/VRS-Eu/static/gdpntl/Longdiff_quar.png)
-
-```{r, echo=FALSE, fig.cap="A caption", out.width = '100%'}
-# knitr::include_graphics("/Users/parthkhare/Desktop/CGD/Projects/Globalsat/VRS-Eu/themes/hugo-eureka/assets/images/GNcharts/Longdiff_quar.png")
-
-knitr::include_graphics("/static/gdpntl/Longdiff_quar.png",error=F)
-```
+![](/gdpntl/Longdiff_quar.png)
 
 
 
