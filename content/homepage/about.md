@@ -1,7 +1,7 @@
 ---
 title: Nightlights 
 draft: false
-role: Parth
+role: CGD
 avatar: images/IndiaNL.png
 bio: VIIRS:Tracking Economic Activity 
 organization:
