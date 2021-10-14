@@ -1,9 +1,9 @@
 ---
-title: VIIRS-Nightlights 
+title: Nightlights 
 draft: false
 role: CGDev
 avatar: images/IndiaNL.png
-bio: Summary of nighlights work done
+bio: VIIRS:Tracking Economic Activity 
 organization:
   name: NOAA Source
   url: https://eogdata.mines.edu/nighttime_light/
