@@ -142,6 +142,7 @@ knitr::include_graphics("/themes/hugo-eureka/assets/images/GNcharts/IMF_WEO_NL.p
 ```
 
 ## Long difference: Quarters
+![](/images/GNcharts/Longdiff_quar.png)
 
 ```{r, echo=FALSE, fig.cap="A caption", out.width = '100%'}
 # knitr::include_graphics("/Users/parthkhare/Desktop/CGD/Projects/Globalsat/VRS-Eu/themes/hugo-eureka/assets/images/GNcharts/Longdiff_quar.png")
