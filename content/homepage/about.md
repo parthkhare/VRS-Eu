@@ -2,7 +2,7 @@
 title: VIIRS-Nightlights 
 draft: false
 role: CGDev
-avatar: images/icon.png
+avatar: images/IndiaNL.png
 bio: Summary of nighlights work done
 organization:
   name: NOAA Source
