@@ -35,8 +35,6 @@ _ Biophysical/Seaonal Noise
 
 DMSP Unit: Digital Number (DN) is a ratio of Upwelling and Downwelling Radiance therefore it is a unitless ratio measuring net reflectance
 
-images/DMSP.png
-
 ## Visible Infrared Imaging Radiometer Suite (VIIRS) - Monthly/Annually 2012- 
 
 Visible Infrared Imaging Radiometer Suite (VIIRS) on-board the SUOMI-NPP satellite, replaced the US Air Force Defense Meteorological Satellite Program (DMSP) Operational Linescan System (OLS)-based data since 2012. The VIIRS is available from the United States National Oceanographic and Atmospheric Administration (NOAA) at a monthly frequency starting from April 2012. In addition, NOAA provides two annual images (recently released from 2012 to 2020: v20) which removes several artifacts from the raw series. 
