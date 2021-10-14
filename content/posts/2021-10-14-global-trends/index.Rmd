@@ -52,12 +52,17 @@ ggplot(brglb, aes(y=log(sum_pix), x=year, color=incat, group=incat)) +
 ```
 
 
+&nbsp;
+&nbsp;
 
+## Quarter wise correlations
 
-## Quarter wise correlations: IMF GDP
+Yaxis-IMF quarter wise GDP
 
 ```{r, echo=F, warning=F, message=F}
 source("http://peterhaschke.com/Code/multiplot.R")
+
+# Check the code: global_gdp_ntl for detaills on the dataset:
 load('/Users/parthkhare/Desktop/CGD/Projects/Globalsat/data/extracted viirs/compiled global ntl/Global GDP quarter/IMFGDP_VRSmon_q.RData')
 dim(ggdp)
 
@@ -70,16 +75,16 @@ plot_corr <- list()
 for(i in 1: length(cats))
 {
   dts <- subset(gyp, year_quar == cats[i])
-  cp <- ggplot(dts, aes(log(sum_pix), log(nom_gdp))) + geom_point() +
+  cp <- ggplot(dts, x=aes(log(sum_pix), y=log(nom_gdp))) + geom_point() +
     # geom_point(aes(colour=factor(dts$iso3c))) +
     xlab('') + ylab('') +
     theme_minimal() + ggtitle(paste0('Corr:',dts$year_quar)) +
-    geom_smooth(method=lm, se=F, linetype="dashed",color="red", size=0.5) +
+    geom_smooth(method=lm, se=F, linetype="dashed",color="red", size=0.35) +
     theme(legend.position = "none")
   cp <- cp + scale_alpha(guide = 'none')
   plot_corr[[i]] <- cp
 }
-print(multiplot(plotlist = plot_corr, cols = 3))
+print(multiplot(plotlist = plot_corr, cols = 4))
 
 # correlation plots: Section II
 gyp <- subset(ggdp, year==c('2016','2018'))
@@ -90,16 +95,16 @@ plot_corr <- list()
 for(i in 1: length(cats))
 {
   dts <- subset(gyp, year_quar == cats[i])
-  cp <- ggplot(dts, aes(log(sum_pix), log(nom_gdp))) + geom_point() +
+  cp <- ggplot(dts, x=aes(log(sum_pix), y=log(nom_gdp))) + geom_point() +
     # geom_point(aes(colour=factor(dts$iso3c))) +
     xlab('') + ylab('') +
     theme_minimal() + ggtitle(paste0('Corr:',dts$year_quar)) +
-    geom_smooth(method=lm, se=F, linetype="dashed",color="red", size=0.5) +
+    geom_smooth(method=lm, se=F, linetype="dashed",color="red", size=0.35) +
     theme(legend.position = "none")
   cp <- cp + scale_alpha(guide = 'none')
   plot_corr[[i]] <- cp
 }
-print(multiplot(plotlist = plot_corr, cols = 3))
+print(multiplot(plotlist = plot_corr, cols = 4))
 
 # correlation plots: Section III
 gyp <- subset(ggdp, year==c('2019','2020'))
@@ -110,24 +115,32 @@ plot_corr <- list()
 for(i in 1: length(cats))
 {
   dts <- subset(gyp, year_quar == cats[i])
-  cp <- ggplot(dts, aes(log(sum_pix), log(nom_gdp))) + geom_point() +
+  cp <- ggplot(dts, x=aes(log(sum_pix), y=log(nom_gdp))) + geom_point() +
     # geom_point(aes(colour=factor(dts$iso3c))) +
     xlab('') + ylab('') +
     theme_minimal() + ggtitle(paste0('Corr:',dts$year_quar)) +
-    geom_smooth(method=lm, se=F, linetype="dashed",color="red", size=0.5) +
+    geom_smooth(method=lm, se=F, linetype="dashed",color="red", size=0.35) +
     theme(legend.position = "none")
   cp <- cp + scale_alpha(guide = 'none')
   plot_corr[[i]] <- cp
 }
-print(multiplot(plotlist = plot_corr, cols = 3))
+print(multiplot(plotlist = plot_corr, cols = 4))
 
 ```
 
-
+&nbsp;
+&nbsp;
 
 
 ## Long difference: HWS style
 
+
+## Quarter wise correlations: IMF GDP
+
+```{r, echo=F, warning=F, message=F}
+source("http://peterhaschke.com/Code/multiplot.R")
+load('/Users/parthkhare/Desktop/CGD/Projects/Globalsat/data/extracted viirs/compiled global ntl/Global GDP quarter/IMFGDP_VRSmon_q.RData')
+dim(ggdp)
 
 
 
