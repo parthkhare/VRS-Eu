@@ -1,5 +1,5 @@
 ---
-title: Diagram Support
+title: Sourcing & Processing 
 description:
 toc: true
 authors:
@@ -26,7 +26,7 @@ Here is one mermaid diagram:
 
 <div class="mermaid">
   graph TD
-  A[Client] --> B[Load Balancer]
+  NOAA[Client] --> EOD[Load Balancer]
   B --> C[Server1]
   B --> D[Server2]
 </div>
