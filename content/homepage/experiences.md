@@ -1,25 +1,25 @@
 ---
-title: Disasters/Humanitarian Crises
+title: Disasters & Humanitarian Crises
 draft: false
 experiences:
   - title: Case Study 1
     organization:
       name: Syrian Humanitarian Crisis 
-      url: https://core.ac.uk/download/pdf/45616412.pdf
+      url: https://core.ac.uk/download/pdf/45616412.pdf/
     dates: '2019 - Present'
     location: Syria
     writeup: >
       Assess number of affected people during crisis using satellite-derived
 indicators.
 
-      - Potential in estimating impacts of humanitarian crisis timely
-
-      - Disaster risk management
+      # - Potential in estimating impacts of humanitarian crisis timely
+      # 
+      # - Disaster risk management
 
   - title: Case Study 2
     organization:
       name: Conflict in Yemen
-      url: https://pngk.org/nightlight/locations/yemen
+      url: https://pngk.org/nightlight/locations/yemen/
     dates: '2017 - 2019'
     location: Yemen
     writeup: >
