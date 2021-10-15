@@ -11,7 +11,7 @@ authors: []
 series: []
 lastmod: '2021-10-15T11:07:59-04:00'
 featuredVideo: ~
-featuredImage: /covidntl/cvdind-scr.png
+featuredImage: /ntlcovid/cvdind-scr.png
 ---
 
 
