@@ -18,8 +18,8 @@ draft: false
 
 Raw Nightlights data is available in raster imagery at NOAA, EOD, where the world is split into 6 tiles
 
-<!--more-->
-
+<br /> 
+<br /> 
 
 ## Defense Meteorological Satellite Program (DMSP) - Annually 1992-2012
 
@@ -53,4 +53,14 @@ multiplying the pixel value by 10^9 gives radiance in units of W/cm2-sr
 ![VIIRS](/ntlproducts/VIIRS.png)
 
 
+
+### VIIRS Annual vs Monthly product
+
+Country level
+![](/ntlproducts/ann-mon-adm0.png)
+
+<br /> 
+
+Adm2 level
+![](/ntlproducts/ann-mon-adm0.png)
 

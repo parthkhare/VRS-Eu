@@ -46,10 +46,30 @@ Broad challenges (from remote sensing literature) are:
   
 - Biophysical seasonality: These include changes in tree and snow cover. Phenological changes are seasonal changes in vegetation and photosynthetic leaf area at the pixel level. Figure demonstrates the impact of a phenological change on the time series of recorded NTL for a pixel located in central Delhi. The smaller image at the inset shows that the pixel has a significant tree cover, which can lead to seasonal patterns in NTL as detected by the sensor. 
 
-![](/cleaning-variant/bioohysesn.png)
+![](/cleaning-variant/biophysesn.png)
 
 
 ## Cleaning: What we did
+
+Regression results from different ways NTL data was prepared
+![](/cleaning-variant/results-cleaning.png)
+
+- Addressing negative values: addressing negative months across districts
+  - V1: Replacing negative values for months with 0 at district level and subsequently aggregating to country level 
+  - V2: Replacing negative values for months with positive value from preceding months at district level and subsequently aggregating to country level 
+  - V3: Removing negative months from data and subsequently aggregating to country level 
+  - V4:Removing 5 countries ('ERI','GUY','PNG','NAM','SLB’) with highest negative pixels by area
+
+<br /> 
+- Addressing seasonality by selecting district-months with least noise:  There were multiple negative pixels in the data, causing sum of pixel for districts(admin2) to be negative for certain months. Use GDP data to train and identify months with poor signal and either eliminate or re-weight them (Elastic-net/Lasso)
+  - Using sum_pix (and remove district-months with noise) 
+  - Using sum_pix * weights from ML model (and remove district-months with noise)
+  - Using absolute value of weights across and take all data (and take all district month pairs)
+![](/cleaning-variant/gbm-relinf.png)
+
+Seems one of the ways of attaining near to HWS results is **by weeding out the months** with noise, which is identified through the coefficients from the ML model.  Note that this methods only filters out the month and does not remove countries (except for US Virgin Islands and Mauritius). At max only 5.7% district months are left out (max for US virgin islands 11%,  Brazil-7%, France-6%, Mozambique-6%)
+
+
 
 
 

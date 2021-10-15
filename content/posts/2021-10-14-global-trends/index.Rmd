@@ -20,7 +20,6 @@ Trends from VIIRS annual product released recently for 2012-2020.
 
 
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE)
 library(ggplot2); library(data.table);library(fixest)

@@ -75,12 +75,13 @@ ggplot(m2[m2$year == '2013'], aes(log(sum_dmsp),log(sum_vrs))) + geom_point() +
   xlim(5,20) + ylim(5,20)
 ```
 
-&nbsp;
+<br /> 
 
 HWS:Regression DMSP-VIIRS overlap years (2012-2013)
 
 ![](/gdpntl/DMVR-HWS.png)
-&nbsp;&nbsp;&nbsp;
+<br /> 
+<br /> 
 
 
 ## By country groups
@@ -118,7 +119,8 @@ ggplot(br, aes(y=log(WDI), x=log(sum_pix/pol_area), color=incat, group=incat)) +
 
 ```
 
-&nbsp;&nbsp;&nbsp;
+<br /> 
+<br /> 
 
 ## By Open Data Barometer ranking
 ```{r, echo=F, warning=F, message=F}
@@ -155,5 +157,5 @@ ggplot(ctyr_noneg_od, aes(y=log(ox_anrgdp_lcu), x=log(sum_pix/pol_area),
 ```
 
 
-
+## Add reg at adm2 level
 
