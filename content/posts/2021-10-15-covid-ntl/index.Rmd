@@ -53,8 +53,10 @@ featuredImage: ~
 By months
 ![](/ntlcovid/ind_delt-1920.png)
 
-State by month
+<br /> 
+States by month
 ![](/ntlcovid/indst_delt-1920.png)
 
+<br /> 
 Map
 ![](/ntlcovid/inddelt_jun.png)

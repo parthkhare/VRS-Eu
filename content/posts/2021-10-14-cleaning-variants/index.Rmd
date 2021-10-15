@@ -49,6 +49,13 @@ Broad challenges (from remote sensing literature) are:
 ![](/cleaning-variant/biophysesn.png)
 <br /> 
 <br /> 
+
+### Instance from India
+Raw sum of lights, across many states in India, occasionally drop before reverting within a year, without any clear underlying socio-economic phenomenon driving these movements. These are not adequately explained by the disruptions caused by natural calamities either
+
+![](/cleaning-variant/indmnth_clean.png)
+<br /> 
+<br /> 
 <br /> 
 
 
