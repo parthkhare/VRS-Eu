@@ -1,0 +1,31 @@
+---
+title: Literature overview
+author: R package build
+date: '2021-10-15'
+slug: []
+categories: []
+tags: []
+description: ~
+toc: yes
+authors: []
+series: []
+lastmod: '2021-10-15T14:21:00-04:00'
+featuredVideo: ~
+featuredImage: ~
+---
+
+
+## Overview
+
+Summary of studies done so far, classified into
+
+- Macro-Country level: 
+  - Growth models (HWS, Sala-i-Martin, Goldberg)
+  - Dated data (Dictator GDP)
+  - Europen: Gibson
+- Micro-adm2 & village level:
+  - D-i-D
+  - State splitting: Asher
+- Event Studies
+  - Disasters
+  - Humanitarian Crisis
