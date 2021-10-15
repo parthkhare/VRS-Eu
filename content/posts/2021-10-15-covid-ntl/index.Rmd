@@ -11,7 +11,7 @@ authors: []
 series: []
 lastmod: '2021-10-15T11:07:59-04:00'
 featuredVideo: ~
-featuredImage: /ntlcovid/cvdind-scr.png
+featuredImage: ~ 
 ---
 
 
@@ -33,7 +33,9 @@ featuredImage: /ntlcovid/cvdind-scr.png
 <br /> 
 <br /> 
 
-## Business stringency
+## Business stringency index
+
+![](/ntlcovid/covid-bsns-indx.pdf)
 
 <br /> 
 <br /> 
