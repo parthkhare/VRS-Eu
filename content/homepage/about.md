@@ -62,7 +62,7 @@ What is done
   - LULC data
 
 What next
-- Cleaning nightlights
+- [Cleaning nightlights](https://nightlights-devecon.netlify.app/posts/2021-10-14-cleaning-variants/)
   - Variant creation
   - Addressing negative values
   - India (WB work recap)
