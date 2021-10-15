@@ -73,7 +73,7 @@ What next
 
 
 ## About Nightlights
-- DMSP-VIIRS
+- [Products (DMSP-VIIRS)](https://nightlights-econ.netlify.app/posts/featured-image/) 
 - Source of NTL (prepared and raw)
 - Literature
 
