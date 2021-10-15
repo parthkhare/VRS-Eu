@@ -1,7 +1,7 @@
 ---
 title: Literature overview
 author: R package build
-date: '2021-10-15'
+date: '2021-10-10'
 slug: []
 categories: []
 tags: []
@@ -29,3 +29,10 @@ Summary of studies done so far, classified into
 - Event Studies
   - Disasters
   - Humanitarian Crisis
+  
+<br /> 
+<br /> 
+
+Other themes: Inequality
+
+![](/litrev/lightinc-gini.png)
