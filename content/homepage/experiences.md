@@ -6,7 +6,7 @@ experiences:
     organization:
       name: Syrian Humanitarian Crisis 
       url: https://core.ac.uk/download/pdf/45616412.pdf/
-    dates: '2019 - Present'
+    dates: '2011 - 2016'
     location: Syria
     writeup: >
       Assess number of affected people during crisis using satellite
@@ -19,7 +19,7 @@ experiences:
     organization:
       name: Conflict in Yemen
       url: https://pngk.org/nightlight/locations/yemen/
-    dates: '2017 - 2019'
+    dates: '2013 - Present'
     location: Yemen
     writeup: >
       **Aliquam** at **rutrum** ante. In sed quam faucibus.
