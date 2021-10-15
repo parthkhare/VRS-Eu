@@ -29,15 +29,21 @@ However, the ultra-low light detection capability of VIIRS DNB also comes with a
 
 Broad challenges (from remote sensing literature) are:
 &nbsp;&nbsp;
-
+<br /> 
+<br /> 
+ 
 - Ephemeral events: crop-residue burning, forest fires, or gas flaring, presence of these anomalies, emitted lights may get scattered and the sensor can record a significant spike in the intensity of lights, that can in turn lead to abnormal variations in the aggregated data
   
 ![](/cleaning-variant/ephemeral.png)
+<br /> 
+<br /> 
 
 - Cloud cover: The presence of clouds can limit the number of clear NTL observations and therefore bias the recorded light intensities.Figure shows how the percentage of cloud-free observations (out of the total number of observations from April 2012 to January 2020) varies across time and geography. Darker the orange shade, more is the cloud cover. Darker blue shade indicates least cloud cover.
 
 ![](/cleaning-variant/cloudcvr.png)
-
+<br /> 
+<br /> 
+  
 - Biophysical seasonality: These include changes in tree and snow cover. Phenological changes are seasonal changes in vegetation and photosynthetic leaf area at the pixel level. Figure demonstrates the impact of a phenological change on the time series of recorded NTL for a pixel located in central Delhi. The smaller image at the inset shows that the pixel has a significant tree cover, which can lead to seasonal patterns in NTL as detected by the sensor. 
 
 ![](/cleaning-variant/bioohysesn.png)

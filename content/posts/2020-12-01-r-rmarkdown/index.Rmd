@@ -26,12 +26,22 @@ While HWS and AUS do not differ much in sum of lights, HWS uses different polygo
 ![](/gdpntl/HWS1_Aug21.jpg)
 
 &nbsp;
+<br /> 
 
 #### Goldberg
 
 ![](/gdpntl/Goldberg_Aug21.png)
 
+
+<br /> 
 &nbsp;
+
+#### Goldberg chart
+Growth =  MEAN(ln(GDP per capita time 1) - ln(GDP per capita time 2))
+
+
+![DMSP](/gdpntl/Goldberg_org.png)
+![VIIRS](/gdpntl/Goldberg_rep.png)
 
 ## Discussion
 
