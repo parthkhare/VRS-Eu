@@ -11,7 +11,7 @@ authors: []
 series: []
 lastmod: '2021-10-15T11:07:59-04:00'
 featuredVideo: ~
-featuredImage: ~
+featuredImage: /covidntl/cvdind-scr.png
 ---
 
 
@@ -19,14 +19,32 @@ featuredImage: ~
 
 2012-2020
 ![](/ntlcovid/cvd_wrolds_1.png)
+<br /> 
+
 2018-2020
 ![](/ntlcovid/cvd_month_wrld_3.png)
+<br /> 
+<br /> 
+
+## D-D: George 
+
+![](/ntlcovid/D-D-covid-validation.pdf)
+
+<br /> 
+<br /> 
+
+## Business stringency
+
+<br /> 
+<br /> 
 
 
 ## Delta NTL & GDP
 
 2019-2020
 ![](/ntlcovid/DeltaNTLWDI19-20.png)
+<br /> 
+<br /> 
 
 ## India
 
