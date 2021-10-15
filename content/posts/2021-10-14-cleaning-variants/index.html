@@ -20,3 +20,28 @@ featuredImage: /cleaning-variant/romainntl.png
 
 </div>
 
+<div id="viirs-sensor-issues" class="section level2">
+<h2>VIIRS Sensor issues</h2>
+<p>From 2012, the newer generation of nightlights observations, the Visible Infrared Imaging Radiometer Suite (VIIRS), that replaced DMSP-OLS overcame the limitations discussed above.
+However, the ultra-low light detection capability of VIIRS DNB also comes with a drawback. It is contaminated by several light sources not directly related to human activities. These sources include stray lights, moon light, lightning, background “noise”, atmospheric backscatter, and others (Elvidge et. al. 2017; Román et al. 2018).</p>
+<p>Broad challenges (from remote sensing literature) are:
+  </p>
+<ul>
+<li>Ephemeral events: crop-residue burning, forest fires, or gas flaring, presence of these anomalies, emitted lights may get scattered and the sensor can record a significant spike in the intensity of lights, that can in turn lead to abnormal variations in the aggregated data</li>
+</ul>
+<p><img src="/cleaning-variant/ephemeral.png" /></p>
+<ul>
+<li>Cloud cover: The presence of clouds can limit the number of clear NTL observations and therefore bias the recorded light intensities.Figure shows how the percentage of cloud-free observations (out of the total number of observations from April 2012 to January 2020) varies across time and geography. Darker the orange shade, more is the cloud cover. Darker blue shade indicates least cloud cover.</li>
+</ul>
+<p><img src="/cleaning-variant/cloudcvr.png" /></p>
+<ul>
+<li>Biophysical seasonality: These include changes in tree and snow cover. Phenological changes are seasonal changes in vegetation and photosynthetic leaf area at the pixel level. Figure demonstrates the impact of a phenological change on the time series of recorded NTL for a pixel located in central Delhi. The smaller image at the inset shows that the pixel has a significant tree cover, which can lead to seasonal patterns in NTL as detected by the sensor.</li>
+</ul>
+<p><img src="/cleaning-variant/bioohysesn.png" /></p>
+</div>
+<div id="cleaning-what-we-did" class="section level2">
+<h2>Cleaning: What we did</h2>
+</div>
+<div id="developing-variants-on-india" class="section level2">
+<h2>Developing variants: on India</h2>
+</div>
