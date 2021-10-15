@@ -56,7 +56,7 @@ What is done
   - HWS, Goldberg
   - Overlap  
   - HMC/LMC
-- Covid
+- [Covid](https://nightlights-econ.netlify.app/posts/2021-10-15-covid-ntl/)
 - Appendix research
   - Colombia
   - LULC data
