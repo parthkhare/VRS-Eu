@@ -11,7 +11,7 @@ authors: []
 series: []
 lastmod: '2021-10-14T02:10:12-04:00'
 featuredVideo: ~
-featuredImage: ~
+featuredImage: /gdpntl/Longdiff_quar.png
 ---
 
 

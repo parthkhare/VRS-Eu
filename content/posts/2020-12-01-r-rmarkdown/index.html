@@ -42,9 +42,138 @@ Bottom line: night lights are a bad proxy where GDP data are reliable (rich coun
 <li>J: Optimism- Yeah, they could be better. But ultimately I think it’s a question of whether we can find significant differences when we start testing hypotheses. E.g., if we hypothesize bigger post-COVID growth deterioration in poorer countries compared to richer ones, can we find that? If we hypothesize a negative (or positive?) association of growth with NPIs, can we find that? If so, great. If not, then yes, could be a measurement issue. But I think the task is to formulate those hypotheses now!</li>
 </ul></li>
 </ul>
+<p> 
+ </p>
 </div>
-<div id="dmsp-viirs-overlap" class="section level4">
-<h4>DMSP-VIIRS overlap</h4>
+</div>
+<div id="dmsp-viirs-overlap" class="section level2">
+<h2>DMSP-VIIRS overlap</h2>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-1-1.png" width="672" /><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-1-2.png" width="672" /></p>
+<p> </p>
+<p>HWS:Regression DMSP-VIIRS overlap years (2012-2013)</p>
+<p><img src="/gdpntl/DMVR-HWS.png" />
+ 
+ </p>
 </div>
+<div id="by-country-groups" class="section level2">
+<h2>By country groups</h2>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="17%" />
+<col width="15%" />
+<col width="14%" />
+<col width="15%" />
+<col width="14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">allcty_raw_wdi</th>
+<th align="left">hic_rw_wdi</th>
+<th align="left">lic_rw_wdi</th>
+<th align="left">lmic_rw_wdi</th>
+<th align="left">umic_rw_wdi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Dependent Var.:</td>
+<td align="left">log(WDI)</td>
+<td align="left">log(WDI)</td>
+<td align="left">log(WDI)</td>
+<td align="left">log(WDI)</td>
+<td align="left">log(WDI)</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">log(sum_pix/pol_area)</td>
+<td align="left">0.0775*** (0.0200)</td>
+<td align="left">0.0740* (0.0352)</td>
+<td align="left">0.1603 (0.1083)</td>
+<td align="left">0.0512* (0.0248)</td>
+<td align="left">0.0715 (0.0500)</td>
+</tr>
+<tr class="even">
+<td align="left">Fixed-Effects:</td>
+<td align="left">——————</td>
+<td align="left">—————-</td>
+<td align="left">—————</td>
+<td align="left">—————-</td>
+<td align="left">—————</td>
+</tr>
+<tr class="odd">
+<td align="left">iso3c_f</td>
+<td align="left">Yes</td>
+<td align="left">Yes</td>
+<td align="left">Yes</td>
+<td align="left">Yes</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="even">
+<td align="left">year_f</td>
+<td align="left">Yes</td>
+<td align="left">Yes</td>
+<td align="left">Yes</td>
+<td align="left">Yes</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="odd">
+<td align="left">incat</td>
+<td align="left">No</td>
+<td align="left">Yes</td>
+<td align="left">Yes</td>
+<td align="left">Yes</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="even">
+<td align="left">_____________________</td>
+<td align="left">__________________</td>
+<td align="left">________________</td>
+<td align="left">_______________</td>
+<td align="left">________________</td>
+<td align="left">_______________</td>
+</tr>
+<tr class="odd">
+<td align="left">S.E.: Clustered</td>
+<td align="left">by: iso3c_f</td>
+<td align="left">by: iso3c_f</td>
+<td align="left">by: iso3c_f</td>
+<td align="left">by: iso3c_f</td>
+<td align="left">by: iso3c_f</td>
+</tr>
+<tr class="even">
+<td align="left">Observations</td>
+<td align="left">1,531</td>
+<td align="left">478</td>
+<td align="left">226</td>
+<td align="left">404</td>
+<td align="left">423</td>
+</tr>
+<tr class="odd">
+<td align="left">R2</td>
+<td align="left">0.99956</td>
+<td align="left">0.99952</td>
+<td align="left">0.99920</td>
+<td align="left">0.99968</td>
+<td align="left">0.99969</td>
+</tr>
+<tr class="even">
+<td align="left">Within R2</td>
+<td align="left">0.04560</td>
+<td align="left">0.04128</td>
+<td align="left">0.09232</td>
+<td align="left">0.02778</td>
+<td align="left">0.02260</td>
+</tr>
+</tbody>
+</table>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 </div>

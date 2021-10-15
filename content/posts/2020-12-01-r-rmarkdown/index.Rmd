@@ -45,8 +45,10 @@ Bottom line: night lights are a bad proxy where GDP data are reliable (rich coun
 - A: VIRS correlations are so weak as to make me wonder how useful they are. 
   - J: Optimism- Yeah, they could be better. But ultimately I think it’s a question of whether we can find significant differences when we start testing hypotheses. E.g., if we hypothesize bigger post-COVID growth deterioration in poorer countries compared to richer ones, can we find that? If we hypothesize a negative (or positive?) association of growth with NPIs, can we find that? If so, great. If not, then yes, could be a measurement issue. But I think the task is to formulate those hypotheses now!
   
+&nbsp;
+&nbsp;
   
-#### DMSP-VIIRS overlap
+## DMSP-VIIRS overlap
 
 ```{r, echo=F, warning=F, message=F}
 load('/Users/parthkhare/Desktop/CGD/Projects/Globalsat/data/HWS & country level/overlap12-13.RData')
@@ -63,5 +65,54 @@ ggplot(m2[m2$year == '2013'], aes(log(sum_dmsp),log(sum_vrs))) + geom_point() +
   ylab(' VIIRS: Sum of light (country)') + ggtitle('2013') +
   xlim(5,20) + ylim(5,20)
 ```
+
+&nbsp;
+
+HWS:Regression DMSP-VIIRS overlap years (2012-2013)
+
+![](/gdpntl/DMVR-HWS.png)
+&nbsp;
+&nbsp;
+
+
+## By country groups
+```{r, echo=F, warning=F, message=F}
+library(knitr)
+load('/Users/parthkhare/Desktop/CGD/Projects/Globalsat/data/HWS & country level/country_year regdata/Ctyr_Jul1_BaseregHML.RData')
+
+# base reg
+br_raw_wdi <- feols(log(WDI) ~ log(sum_pix/pol_area)|iso3c_f +year_f, model='within',data=br)
+br_raw_pwt <- feols(log(pwt_rgdpna) ~ log(sum_pix/pol_area)|iso3c_f +year_f, model='within',data=br)
+br_raw_ox  <- feols(log(ox_anrgdp_lcu) ~ log(sum_pix/pol_area)|iso3c_f +year_f, model='within',data=br)
+t1=etable(br_raw_wdi, br_raw_pwt, br_raw_ox)
+# knitr::kable(t1)
+
+# -----------------------------
+# WDI: Base data country groups
+# -----------------------------
+allcty_raw_wdi <- feols(log(WDI) ~ log(sum_pix/pol_area)|iso3c_f +year_f, model='within',data=br)
+hic_rw_wdi <- feols(log(WDI) ~ log(sum_pix/pol_area)|iso3c_f +year_f+incat, model='within',
+                    data=br[br$incat=="HIC",])
+lic_rw_wdi <- feols(log(WDI) ~ log(sum_pix/pol_area)|iso3c_f +year_f+incat, model='within',
+                    data=br[br$incat=="LIC",])
+lmic_rw_wdi <- feols(log(WDI) ~ log(sum_pix/pol_area)|iso3c_f +year_f+incat, model='within',
+                    data=br[br$incat=="LMIC",])
+umic_rw_wdi <- feols(log(WDI) ~ log(sum_pix/pol_area)|iso3c_f +year_f+incat, model='within',
+                    data=br[br$incat=="UMIC",])
+t2=etable(allcty_raw_wdi, hic_rw_wdi, lic_rw_wdi, lmic_rw_wdi, umic_rw_wdi)
+knitr::kable(t2)
+
+# GGplot hmc lmc
+ggplot(br, aes(y=log(WDI), x=log(sum_pix/pol_area), color=incat, group=incat)) +
+  geom_point(size=0.5) + geom_smooth(size=0.5,se=F, method='lm') +
+  ggtitle('NTL-WDI') + ylab('log WDI') + xlab('Sum pixels/area')
+
+
+```
+
+
+
+
+
 
 
