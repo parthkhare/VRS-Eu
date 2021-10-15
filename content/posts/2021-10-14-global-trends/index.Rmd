@@ -11,7 +11,7 @@ authors: []
 series: []
 lastmod: '2021-10-14T02:10:12-04:00'
 featuredVideo: ~
-featuredImage: /gdpntl/Longdiff_quar.png
+featuredImage: /gdpntl/IMF_WEO_NL.png
 ---
 
 
@@ -52,8 +52,9 @@ ggplot(brglb, aes(y=log(sum_pix), x=year, color=incat, group=incat)) +
 ```
 
 
-&nbsp;
-&nbsp;
+<br /> 
+<br /> 
+
 
 ## Quarter wise correlations
 
@@ -128,14 +129,16 @@ print(multiplot(plotlist = plot_corr, cols = 3))
 
 ```
 
-&nbsp;
-&nbsp;
+<br /> 
+<br /> 
+
+## Long difference
+
+HWS: DMSP vs VIIRS
+![](/gdpntl/longdiff_comp)
 
 
-## Long difference: Annual
-
-![](/gdpntl/IMF_WEO_NL.png)
-
-## Long difference: Quarter
+<br />
+Quarter
 ![](/gdpntl/Longdiff_quar.png)
 
