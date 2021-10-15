@@ -15,9 +15,7 @@ indicators.
       - Potential in estimating impacts of humanitarian crisis timely
 
       - Disaster risk management
-# 
-#       - Nam tincidunt diam quis lorem rutrum ullamcorper.
-      
+
   - title: Case Study 2
     organization:
       name: Conflict in Yemen
