@@ -45,7 +45,7 @@ widget:
 
 ## Background
 
-Nighttime lights can turn out to be a useful proxy of economic activity as lights emanating from residential settlements and commercial establishments contain “signatures” of human activity. Since 2012, nightlight recordings obtained from the Visible Infrared Imaging Radiometer Suite (VIIRS) on board the SUOMI-NPP satellite, addressed many of the drawbacks inherent in the earlier vintage of data obtained from the US Air Force Defense Meteorological Satellite Program— Operational Linescan System (DMSP-OLS). 
+Nighttime lights can be a useful proxy of economic activity as lights emanating from residential settlements and commercial establishments contain “signatures” of human activity. Since 2012, nightlight recordings obtained from the Visible Infrared Imaging Radiometer Suite (VIIRS) on board the SUOMI-NPP satellite, addressed many of the drawbacks inherent in the earlier vintage of data obtained from the US Air Force Defense Meteorological Satellite Program— Operational Linescan System (DMSP-OLS). 
 
 
 ## Index
@@ -53,8 +53,8 @@ Nighttime lights can turn out to be a useful proxy of economic activity as light
 What is done
 - [Global trends](https://nightlights-devecon.netlify.app/posts/2021-10-14-global-trends/)
 - [Regressions-Attenuation](https://nightlights-devecon.netlify.app/posts/2020-12-01-r-rmarkdown/)
-  - HWS
-  - Goldberg
+  - HWS, Goldberg
+  - Overlap  
   - HMC/LMC
 - Covid
 - Appendix research
