@@ -1,11 +1,11 @@
 ---
-title: Disasters & Humanitarian Crises
+title: Disasters Humanitarian Crises
 draft: false
 experiences:
   - title: Case Study 1
     organization:
       name: Syrian Humanitarian Crisis 
-      url: https://core.ac.uk/download/pdf/45616412.pdf/
+      url: 
     dates: '2019 - Present'
     location: Syria
     writeup: >
@@ -19,7 +19,7 @@ indicators.
   - title: Case Study 2
     organization:
       name: Conflict in Yemen
-      url: https://pngk.org/nightlight/locations/yemen/
+      url: 
     dates: '2017 - 2019'
     location: Yemen
     writeup: >
