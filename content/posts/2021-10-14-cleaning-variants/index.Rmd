@@ -79,19 +79,32 @@ Regression results from different ways NTL data was prepared
 
 Seems one of the ways of attaining near to HWS results is **by weeding out the months** with noise, which is identified through the coefficients from the ML model.  Note that this methods only filters out the month and does not remove countries (except for US Virgin Islands and Mauritius). At max only 5.7% district months are left out (max for US virgin islands 11%,  Brazil-7%, France-6%, Mozambique-6%)
 
-
+<br /> 
+<br /> 
+<br /> 
 
 
 ## Developing variants: on India 
 
+The variants follow three principles. The principles are
+
+- (i) addressing the drop in light intensity by developing a non-decreasing series over time for each state (based on the understanding that the if lights represent economic activities, then no abrupt decrease should occur unless there is a shock), 
+- (ii) studying selective regions (pixels) that are least likely to witness a drop in lights intensity
+- (iii) addressing drop in light intensity by controlling for cloud cover (here, we make use of an ancillary series released along with the light intensity which contains information on number of days in a month the pixels were covered with clouds.
+
+<br /> 
+<br /> 
 
 Approach
 ![](/cleaning-variant/thinkingvar.png)
 
 
+<br /> 
+<br /> 
 
 Variants for India
 ![](/cleaning-variant/allv-ind.png)
+<br /> 
 
 Variants for India by states
 ![](/cleaning-variant/allv-indst.png)

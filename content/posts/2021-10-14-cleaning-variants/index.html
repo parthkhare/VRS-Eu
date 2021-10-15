@@ -76,13 +76,33 @@ However, the ultra-low light detection capability of VIIRS DNB also comes with a
 </ul></li>
 </ul>
 <p>Seems one of the ways of attaining near to HWS results is <strong>by weeding out the months</strong> with noise, which is identified through the coefficients from the ML model. Note that this methods only filters out the month and does not remove countries (except for US Virgin Islands and Mauritius). At max only 5.7% district months are left out (max for US virgin islands 11%, Brazil-7%, France-6%, Mozambique-6%)</p>
+<p><br />
+<br />
+<br /></p>
 </div>
 <div id="developing-variants-on-india" class="section level2">
 <h2>Developing variants: on India</h2>
+<p>The variants follow three principles. The principles are</p>
+<ul>
+<li><ol style="list-style-type: lower-roman">
+<li>addressing the drop in light intensity by developing a non-decreasing series over time for each state (based on the understanding that the if lights represent economic activities, then no abrupt decrease should occur unless there is a shock),</li>
+</ol></li>
+<li><ol start="2" style="list-style-type: lower-roman">
+<li>studying selective regions (pixels) that are least likely to witness a drop in lights intensity</li>
+</ol></li>
+<li><ol start="3" style="list-style-type: lower-roman">
+<li>addressing drop in light intensity by controlling for cloud cover (here, we make use of an ancillary series released along with the light intensity which contains information on number of days in a month the pixels were covered with clouds.</li>
+</ol></li>
+</ul>
+<p><br />
+<br /></p>
 <p>Approach
 <img src="/cleaning-variant/thinkingvar.png" /></p>
+<p><br />
+<br /></p>
 <p>Variants for India
-<img src="/cleaning-variant/allv-ind.png" /></p>
+<img src="/cleaning-variant/allv-ind.png" />
+<br /></p>
 <p>Variants for India by states
 <img src="/cleaning-variant/allv-indst.png" /></p>
 <p>Variants schema chart
