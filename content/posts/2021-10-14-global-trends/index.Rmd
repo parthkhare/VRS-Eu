@@ -139,6 +139,3 @@ print(multiplot(plotlist = plot_corr, cols = 3))
 ## Long difference: Quarter
 ![](/gdpntl/Longdiff_quar.png)
 
-
-
-
