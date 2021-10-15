@@ -15,6 +15,30 @@ featuredImage: ~
 ---
 
 
-Movies i love
+## Call 1
 
-![](/litrev/sia.jpg)
+
+
+## Call: 15-Oct
+- Run stringency index charts
+- War and crisis should be a low bar
+- Cleaning make sense
+  - large samples remove noise
+  - standarize rather than customize 
+  - 
+- Imaginging NTL potential as a bar
+  - ceiling: to predict economic activity
+  - floor: explain war and crises 
+  - Remember main idea of data quality improvement
+  
+- to do
+  - covid stringency index by month and country
+  - check for wars
+  - filter habitable, manufacturing adm2 polygons
+    - population
+    - built-up lulc
+  - afg (later): find aid
+
+
+
+
