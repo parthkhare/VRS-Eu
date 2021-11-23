@@ -51,8 +51,8 @@ Nighttime lights can be a useful proxy of economic activity as lights emanating 
 ## Index
 
 What is done
-- [Global trends](https://nightlights-devecon.netlify.app/posts/2021-10-14-global-trends/)
-- [Regressions-Attenuation](https://nightlights-devecon.netlify.app/posts/2020-12-01-r-rmarkdown/)
+- [Global trends](https://nightlights-econ.netlify.app/posts/2021-10-14-global-trends/)
+- [Regressions-Attenuation](https://nightlights-econ.netlify.app/posts/2020-12-01-r-rmarkdown/)
   - HWS, Goldberg
   - Overlap  
   - HMC/LMC
@@ -62,7 +62,7 @@ What is done
   - LULC data
 
 What next
-- [Cleaning nightlights](https://nightlights-devecon.netlify.app/posts/2021-10-14-cleaning-variants/)
+- [Cleaning nightlights](https://nightlights-econ.netlify.app/posts/2021-10-14-cleaning-variants/)
   - Variant creation
   - Addressing negative values
   - India (WB work recap)
