@@ -31,25 +31,25 @@ However, the ultra-low light detection capability of VIIRS DNB also comes with a
 <ul>
 <li>Ephemeral events: crop-residue burning, forest fires, or gas flaring, presence of these anomalies, emitted lights may get scattered and the sensor can record a significant spike in the intensity of lights, that can in turn lead to abnormal variations in the aggregated data</li>
 </ul>
-<p><img src="/cleaning-variant/ephemeral.png" />
+<p><img src="/cleaning-variant/ephemeral.png" width="500" />
 <br />
 <br /></p>
 <ul>
 <li>Cloud cover: The presence of clouds can limit the number of clear NTL observations and therefore bias the recorded light intensities.Figure shows how the percentage of cloud-free observations (out of the total number of observations from April 2012 to January 2020) varies across time and geography. Darker the orange shade, more is the cloud cover. Darker blue shade indicates least cloud cover.</li>
 </ul>
-<p><img src="/cleaning-variant/cloudcvr.png" />
+<p><img src="/cleaning-variant/cloudcvr.png" width="500" />
 <br />
 <br /></p>
 <ul>
 <li>Biophysical seasonality: These include changes in tree and snow cover. Phenological changes are seasonal changes in vegetation and photosynthetic leaf area at the pixel level. Figure demonstrates the impact of a phenological change on the time series of recorded NTL for a pixel located in central Delhi. The smaller image at the inset shows that the pixel has a significant tree cover, which can lead to seasonal patterns in NTL as detected by the sensor.</li>
 </ul>
-<p><img src="/cleaning-variant/biophysesn.png" />
+<p><img src="/cleaning-variant/biophysesn.png" width="500" />
 <br />
 <br /></p>
 <div id="instance-from-india" class="section level3">
 <h3>Instance from India</h3>
 <p>Raw sum of lights, across many states in India, occasionally drop before reverting within a year, without any clear underlying socio-economic phenomenon driving these movements. These are not adequately explained by the disruptions caused by natural calamities either</p>
-<p><img src="/cleaning-variant/indmnth_clean.png" />
+<p><img src="/cleaning-variant/indmnth_clean.png" width="500" />
 <br />
 <br />
 <br /></p>
@@ -58,7 +58,7 @@ However, the ultra-low light detection capability of VIIRS DNB also comes with a
 <div id="cleaning-what-we-did" class="section level2">
 <h2>Cleaning: What we did</h2>
 <p>Regression results from different ways NTL data was prepared
-<img src="/cleaning-variant/results-cleaning.png" /></p>
+<img src="/cleaning-variant/results-cleaning.png" width="500" /></p>
 <ul>
 <li>Addressing negative values: addressing negative months across districts
 <ul>
@@ -72,7 +72,7 @@ However, the ultra-low light detection capability of VIIRS DNB also comes with a
 <li>Using sum_pix (and remove district-months with noise)</li>
 <li>Using sum_pix * weights from ML model (and remove district-months with noise)</li>
 <li>Using absolute value of weights across and take all data (and take all district month pairs)
-<img src="/cleaning-variant/gbm-relinf.png" /></li>
+<img src="/cleaning-variant/gbm-relinf.png" width="500" /></li>
 </ul></li>
 </ul>
 <p>Seems one of the ways of attaining near to HWS results is <strong>by weeding out the months</strong> with noise, which is identified through the coefficients from the ML model. Note that this methods only filters out the month and does not remove countries (except for US Virgin Islands and Mauritius). At max only 5.7% district months are left out (max for US virgin islands 11%, Brazil-7%, France-6%, Mozambique-6%)</p>
@@ -97,14 +97,14 @@ However, the ultra-low light detection capability of VIIRS DNB also comes with a
 <p><br />
 <br /></p>
 <p>Approach
-<img src="/cleaning-variant/thinkingvar.png" /></p>
+<img src="/cleaning-variant/thinkingvar.png" width="500" /></p>
 <p><br />
 <br /></p>
 <p>Variants for India
-<img src="/cleaning-variant/allv-ind.png" />
+<img src="/cleaning-variant/allv-ind.png" width="600" />
 <br /></p>
 <p>Variants for India by states
-<img src="/cleaning-variant/allv-indst.png" /></p>
+<img src="/cleaning-variant/allv-indst.png" width="700" /></p>
 <p>Variants schema chart
-<img src="/cleaning-variant/variantsorg.png" /></p>
+<img src="/cleaning-variant/variantsorg.png" width="500" /></p>
 </div>

@@ -33,27 +33,28 @@ Broad challenges (from remote sensing literature) are:
 <br /> 
  
 - Ephemeral events: crop-residue burning, forest fires, or gas flaring, presence of these anomalies, emitted lights may get scattered and the sensor can record a significant spike in the intensity of lights, that can in turn lead to abnormal variations in the aggregated data
-  
-![](/cleaning-variant/ephemeral.png)
+
+
+![](/cleaning-variant/ephemeral.png){width=500px}
 <br /> 
 <br /> 
 
 - Cloud cover: The presence of clouds can limit the number of clear NTL observations and therefore bias the recorded light intensities.Figure shows how the percentage of cloud-free observations (out of the total number of observations from April 2012 to January 2020) varies across time and geography. Darker the orange shade, more is the cloud cover. Darker blue shade indicates least cloud cover.
 
-![](/cleaning-variant/cloudcvr.png)
+![](/cleaning-variant/cloudcvr.png){width=500px}
 <br /> 
 <br /> 
   
 - Biophysical seasonality: These include changes in tree and snow cover. Phenological changes are seasonal changes in vegetation and photosynthetic leaf area at the pixel level. Figure demonstrates the impact of a phenological change on the time series of recorded NTL for a pixel located in central Delhi. The smaller image at the inset shows that the pixel has a significant tree cover, which can lead to seasonal patterns in NTL as detected by the sensor. 
 
-![](/cleaning-variant/biophysesn.png)
+![](/cleaning-variant/biophysesn.png){width=500px}
 <br /> 
 <br /> 
 
 ### Instance from India
 Raw sum of lights, across many states in India, occasionally drop before reverting within a year, without any clear underlying socio-economic phenomenon driving these movements. These are not adequately explained by the disruptions caused by natural calamities either
 
-![](/cleaning-variant/indmnth_clean.png)
+![](/cleaning-variant/indmnth_clean.png){width=500px}
 <br /> 
 <br /> 
 <br /> 
@@ -62,7 +63,7 @@ Raw sum of lights, across many states in India, occasionally drop before reverti
 ## Cleaning: What we did
 
 Regression results from different ways NTL data was prepared
-![](/cleaning-variant/results-cleaning.png)
+![](/cleaning-variant/results-cleaning.png){width=500px}
 
 - Addressing negative values: addressing negative months across districts
   - V1: Replacing negative values for months with 0 at district level and subsequently aggregating to country level 
@@ -75,7 +76,7 @@ Regression results from different ways NTL data was prepared
   - Using sum_pix (and remove district-months with noise) 
   - Using sum_pix * weights from ML model (and remove district-months with noise)
   - Using absolute value of weights across and take all data (and take all district month pairs)
-![](/cleaning-variant/gbm-relinf.png)
+![](/cleaning-variant/gbm-relinf.png){width=500px}
 
 Seems one of the ways of attaining near to HWS results is **by weeding out the months** with noise, which is identified through the coefficients from the ML model.  Note that this methods only filters out the month and does not remove countries (except for US Virgin Islands and Mauritius). At max only 5.7% district months are left out (max for US virgin islands 11%,  Brazil-7%, France-6%, Mozambique-6%)
 
@@ -96,23 +97,23 @@ The variants follow three principles. The principles are
 <br /> 
 
 Approach
-![](/cleaning-variant/thinkingvar.png)
+![](/cleaning-variant/thinkingvar.png){width=500px}
 
 
 <br /> 
 <br /> 
 
 Variants for India
-![](/cleaning-variant/allv-ind.png)
+![](/cleaning-variant/allv-ind.png){width=600px}
 <br /> 
 
 Variants for India by states
-![](/cleaning-variant/allv-indst.png)
+![](/cleaning-variant/allv-indst.png){width=700px}
 
 
 
 
 
 Variants schema chart
-![](/cleaning-variant/variantsorg.png)
+![](/cleaning-variant/variantsorg.png){width=500px}
 
