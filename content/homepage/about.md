@@ -49,8 +49,6 @@ Nighttime lights or nightlights has turned out to be a useful proxy of economic 
 
 
 ## Index
-
-What is done
 - [Global trends](https://nightlights-econ.netlify.app/posts/2021-10-14-global-trends/)
 - [Regressions-Attenuation](https://nightlights-econ.netlify.app/posts/2020-12-01-r-rmarkdown/)
   - HWS, Goldberg
