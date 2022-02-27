@@ -3,7 +3,7 @@ title: Nightlights
 draft: false
 role: CGD
 avatar: images/IndiaNL.png
-bio: VIIRS:Tracking Economic Activity 
+bio: Shedding lights on nightlights:VIIRS-DMSP-BM 
 organization:
   name: EOD
   url: https://eogdata.mines.edu/nighttime_light/
