@@ -1,5 +1,5 @@
 ---
-title: FollowupsCalls
+title: Nightlights in economic research
 author: R package build
 date: '2021-10-15'
 slug: []
@@ -15,8 +15,26 @@ featuredImage: ~
 ---
 
 
-## Call 1
+## Brief history of nightligts in research
 
+Given the resolution and frequency, nightlights have been used to proxy economic activity. It is helpful to however dissect the level 
+
+
+
+
+## VIIRS vs DMSP why the low coefficients
+
+From 2012, the newer generation of nightlights observations, the Visible Infrared Imaging Radiometer Suite (VIIRS), that replaced DMSP-OLS overcame the limitations discussed above.
+However, the ultra-low light detection capability of VIIRS DNB also comes with a drawback. It is contaminated by several light sources not directly related to human activities. These sources include stray lights, moon light, lightning, background “noise”, atmospheric backscatter, and others (Elvidge 
+
+
+## Scale of regressions
+
+### At National
+
+
+
+### At Subnational
 
 
 ## Call: 15-Oct
