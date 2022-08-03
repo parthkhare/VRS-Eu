@@ -17,8 +17,10 @@ featuredImage: ~
 
 ## Brief history of nightligts in research
 
+Nightlights data is 
 Given the resolution and frequency, nightlights have been used to proxy economic activity. It is helpful to however dissect the level 
 
+## Nightlights
 
 
 

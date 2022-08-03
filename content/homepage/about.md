@@ -1,12 +1,12 @@
 ---
-title: Nightlights 
+title: Nightlights for Economic Development 
 draft: false
-role: CGD
+role: Parth Khare
 avatar: images/IndiaNL.png
-bio: Shedding lights on nightlights:VIIRS-DMSP-BM 
+bio: Shedding lights on nightlights:DMSP-VIIRS-Black Marble 
 organization:
-  name: EOD
-  url: https://eogdata.mines.edu/nighttime_light/
+  name: CGD
+  url: https://www.cgdev.org/
 social:
   - icon: envelope
     iconPack: fas
