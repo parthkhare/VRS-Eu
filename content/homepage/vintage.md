@@ -1,7 +1,7 @@
 ---
 title: Vintage
 draft: false
-slogan: Looking at stars on earth, soothsaying from constellations of growth.
+slogan: Looking at stars on earth, soothsaying from constellations on growth.
 imgLeft: ntlstock/NTL-12-16Ind.jpg
 imgRight: ntlstock/NTL-12-16Kor.jpg
 
