@@ -53,7 +53,7 @@ Nighttime lights or nightlights have been used as a proxy of economic activity a
 Despite its success as a useful proxy, The Defense Meteorological Satellite Program— Operational Linescan System or DMSP-OLS satellite faced multiple problems, including sensor degradation and [top coding](https://onlinelibrary.wiley.com/doi/abs/10.1111/obes.12417). In addition, the DMSP program had to frequently re launch different sensors (F12, F13,F14) periodically. In an attempt to improve these infirmities, a better product suite called Visible Infrared Imaging Radiometer Suite (VIIRS) on board the SUOMI-NPP satellite was released. It addressed many of the drawbacks inherent within DMSP. However, despite being a better data source, VIIRS has proved challenging to explain economic activity at a country level so far. Moreover, a cleaner version of the VIIRS data (addressing cloud cover, noisy pixels) was later re-released by NASA in 2021/2022, called BlackMarble.
 
 Tldr: VIIRS or Blackmable do not explain country level growth at least much as DMSP explained. However, despite this many localized  studies still exploit this association by using VIIRS as a proxy for measuring effectiveness of various development interventions. Why is it that despite improved data, is there an attenutation in the association between nightlights-economic growth, or were measuring it wrong all along? 
-\
+
 
 
 
@@ -89,7 +89,7 @@ Along with testing these hypotheses, we also look for limited scenarios regions 
 ## About Nightlights
 - [Products (DMSP-VIIRS)](https://nightlights-econ.netlify.app/posts/featured-image/) 
 - [Literature](https://nightlights-econ.netlify.app/posts/2021-10-15-litrev/)
-\
+
 
 
 ## Caveat thinking: On Macroecnomics and Big Data (Signal/Noise)
