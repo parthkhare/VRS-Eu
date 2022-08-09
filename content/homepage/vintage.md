@@ -1,7 +1,7 @@
 ---
 title: Vintage
 draft: false
-slogan: We are all in the gutter, but some of us are looking at the stars.
+slogan: Looking at stars on earth, soothsaying from constellations of growth.
 imgLeft: ntlstock/NTL-12-16Ind.jpg
 imgRight: ntlstock/NTL-12-16Kor.jpg
 
