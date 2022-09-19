@@ -1,0 +1,37 @@
+---
+title: "Ukraine Nightlights"
+author: "parth"
+date: '2022-09-19'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Ukraine Nightlights
+
+
+
+
+
+
+```{r cars, message=F, echo=F}
+# Import Nightlights
+pthuk <- "/Users/parthkhare/Desktop/CGD/Projects/Ukraine FB Mobility NTL/nightlights/Ukraine mosaics/2022"
+alras <- list.files(pthuk, pattern = ".*tif", full.names = T)
+
+Jan <- raster(alras[3])
+
+plot(Jan)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
