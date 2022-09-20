@@ -1,0 +1,61 @@
+---
+title: Nightlights in Ukraine
+author: R package build
+date: '2021-10-14'
+slug: []
+categories: []
+tags: []
+description: ~
+toc: yes
+authors: []
+series: []
+lastmod: '2021-10-14T21:22:57-04:00'
+featuredVideo: ~
+featuredImage: /ukraine/UkrJan2022.png
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+library(ggplot2); library(data.table);library(fixest)
+options(scipen=99)
+```
+
+## Ukraine Nightlights
+
+```{r message=F,echo=F,warning=FALSE}
+pthuk <- "/Users/parthkhare/Desktop/CGD/Projects/Ukraine FB Mobility NTL/nightlights/Ukraine mosaics/2022"
+alras <- list.files(pthuk, pattern = ".*tif", full.names = T)
+
+rjan <-  raster(alras[3])
+rfeb <-  raster(alras[2])
+rmar <-  raster(alras[6])
+rapr <-  raster(alras[1])
+rmay <-  raster(alras[7])
+rjun <-  raster(alras[5])
+rjul <-  raster(alras[4])
+
+
+levelplot(rjan, at=cuts, par.settings=rasterTheme(ntlcol),main='Feb 2022',
+          sub=expression(Watt/cm2/sr),pretty=T,maxpixels = 1e6, margin=F)
+
+levelplot(rmay, at=cuts, par.settings=rasterTheme(ntlcol),main='May 2022',
+          sub=expression(Watt/cm2/sr),pretty=T,maxpixels = 1e6, margin=F)
+
+```
+
+
+<!-- <br />  -->
+<!-- <br />  -->
+
+
+## Absense of income data
+
+
+<!-- - Addressing negative values: addressing negative months across districts -->
+<!--   - V1: Replacing negative values for months with 0 at district level and subsequently aggregating to country level  -->
+<!--   - V2: Replacing negative values for months with positive value from preceding months at district level and  -->
+
+
+
