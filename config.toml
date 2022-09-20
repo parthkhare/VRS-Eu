@@ -1,7 +1,7 @@
 theme = "hugo-eureka"
 baseURL = '/'
 languageCode = 'en-us'
-title = 'VIIRS-Econ'
+title = 'Nightlight-Dev'
 canonifyurls = true
 relativeurls = true
 markup.goldmark.renderer.unsafe = true

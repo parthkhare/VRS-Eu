@@ -40,7 +40,7 @@ Satellite data is a useful resource in the absence of real time data. Imagery fr
 
 ## Assessing impact of war in Ukarine from nightlights
 
-The following images show the drastic drop in nightlights across Ukraine from February to May 2022.
+The following images show the drastic drop in nightlights across Ukraine from January to May 2022.
 
 
 ```{r message=F,echo=F,warning=FALSE, }
@@ -65,43 +65,52 @@ levelplot(rjan, at=cuts, par.settings=rasterTheme(ntlcol),main='Before: Jan 2022
           sub=expression(Watt/cm2/sr),pretty=T,maxpixels = 8222466, margin=F)
 # mapView(rjan, col.regions = ntlcol, at=cuts, maxpixels=8222466, alpha.regions = 0.9, zoom=6)
 
-
-
-```
-<br />
-
-Blue and yellow lit regions represent major cities 
-
-
-```{r message=F,echo=F,warning=FALSE}
 # Plot May raster 
 levelplot(rmay, at=cuts, par.settings=rasterTheme(ntlcol),main='After: May 2022',
           sub=expression(Watt/cm2/sr),pretty=T,maxpixels = 8222466, margin=F)
 # mapView(rmay, col.regions = ntlcol, at=cuts, maxpixels=8222466, alpha.regions = 0.9,zoom=6)
 
 ```
+<br />
+
+It can be clearly seen that the lights intensity in highly lit (bright yellow) regions corresponding to cities Kyiv, Lyiv, Kharkhiv have drastically reduced since January and continue on a downward trend. Milder yello/orange regions capturing street lights from highways has almost disappeared, matching with [ongoing reports](https://www.kyivpost.com/ukraine-politics/during-100-days-invaders-destroy-24000-km-of-roads-300-bridges.html) from the ground. Lights from dark blue regions capturing small settlement have almost disappeared.
+
 
 
 <br />
 <br />
 
-Select layers manually
+
+
+## Electricity Demand
+
+Drop in lights match with the drop in monthly [electricity demand estimated by the IEA](https://www.iea.org/data-and-statistics/data-tools/ukraine-real-time-electricity-data-explorer). This is a helpful validation as nightlights are often confounded by various [biophysical, seasonal noise](https://nightlights-econ.netlify.app/posts/2021-10-14-cleaning-variants/) However,comparing with electricity demand confirms the perception, direction, and magnitude of the fall.
+
+![](/ukraine/Ukrelecdd.png)
+
+(source)[https://www.iea.org/data-and-statistics/data-tools/ukraine-real-time-electricity-data-explorer]
+
+
+
+
+### Interactive map
+
 
 ```{r message=F,echo=F,warning=FALSE}
 # Method II: leaflet
 cuts2=c(0,2,5,10,20,50,100,500,65535)
 
 # Nightlights color bin
-ntlcb <- colorBin(palette = ntlcol, bins = cuts, domain = cuts)
+ntlcb <- colorBin(palette = ntlcol, bins = cuts2, domain = cuts2)
 
 
 leaflet() %>% addTiles() %>%
   addProviderTiles(providers$CartoDB.Positron, group = "Carto") %>%
-  addRasterImage(rjan, at=cuts2, colors = ntlcol, opacity = 0.9, group="Jan-2022") %>%
-  addRasterImage(rfeb, at=cuts2, colors = ntlcol, opacity = 0.9, group="Feb-2022") %>%
-  addRasterImage(rmar, at=cuts2, colors = ntlcol, opacity = 0.9, group="Mar-2022") %>%
-  addRasterImage(rapr, at=cuts2, colors = ntlcol, opacity = 0.9, group="Apr-2022") %>%
-  addRasterImage(rmay, at=cuts2, colors = ntlcol, opacity = 0.9, group="May-2022") %>%
+  addRasterImage(rjan, at=cuts2, colors = ntlcb, opacity = 0.9, group="Jan-2022") %>%
+  addRasterImage(rfeb, at=cuts2, colors = ntlcb, opacity = 0.9, group="Feb-2022") %>%
+  addRasterImage(rmar, at=cuts2, colors = ntlcb, opacity = 0.9, group="Mar-2022") %>%
+  addRasterImage(rapr, at=cuts2, colors = ntlcb, opacity = 0.9, group="Apr-2022") %>%
+  addRasterImage(rmay, at=cuts2, colors = ntlcb, opacity = 0.9, group="May-2022") %>%
   addLayersControl(overlayGroups = c("Jan-2022","Feb-2022","Mar-2022","Apr-2022","May-2022"),
                    options = layersControlOptions(collapsed = FALSE)) %>% 
   hideGroup(c("Feb-2022", "Mar-2022","Apr-2022","May-2022"))  %>%
@@ -111,12 +120,16 @@ leaflet() %>% addTiles() %>%
 <br />
 <br />
 
+
+
 Drop in nightlights across months
 
 ![](UkrNtl_lres.gif)
 
 
-- NOTE 
+NOTE 
   - It should be remembered that lights are not exactly income. While they can be used and have proven to be a helpful proxy for estimating economic growth. 
   - Nightlight measures radiance of light in Watt/cm2/sr, and all the maps here use the same legend for comparing results ovetime
-  - Nightlights data for month of June seems to been biased by external noise from shells and not included here
+  - Nightlights data for month of June seems to been biased by external noise from bombing and is not included here
+  - Nightlights map can be misleading with different color labels, the labels used here are based 
+

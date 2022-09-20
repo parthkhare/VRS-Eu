@@ -77,14 +77,10 @@ Along with testing these hypotheses, we also look for limited scenarios regions 
   - HMC/LMC
 - [Covid](https://nightlights-econ.netlify.app/posts/2021-10-15-covid-ntl/)
 - [Cleaning nightlights](https://nightlights-econ.netlify.app/posts/2021-10-14-cleaning-variants/)
-  - Variant creation
-  - Addressing negative values
+  - Variant creation, Addressing negative values
 - Scale: micro vs macro
 - Different specifications ?
-- What final form could look like ?
-- Appendix research
-  - Colombia
-  - LULC data
+- Appendix research (Colombia, LULC)
 
 ## About Nightlights
 - [Products (DMSP-VIIRS)](https://nightlights-econ.netlify.app/posts/featured-image/) 
