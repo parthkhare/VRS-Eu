@@ -18,8 +18,14 @@ featuredImage: /ukraine/UkrJan2022.png
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE)
-library(ggplot2); library(data.table);library(fixest)
+library(ggplot2); library(data.table);library(fixest);library(raster);library(rasterVis)
 options(scipen=99)
+
+# For ColorCombos382 palette
+ntlcol <- c("#09090c", "#19192f",'#0000a6' ,"#ffb300", "#ffe200")
+# cuts
+cuts=c(0,2,5,10,20,50,100,500,65535)
+
 ```
 
 ## Ukraine Nightlights
