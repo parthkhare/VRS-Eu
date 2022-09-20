@@ -19,14 +19,18 @@ date: '2022-09-15'
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE)
 library(ggplot2); library(data.table);library(fixest);library(raster);library(rasterVis)
-library(animation); library(mapview)
+library(animation); library(mapview); library(leaflet); library(RColorBrewer)
 options(scipen=99)
 
-# For ColorCombos382 palette
+# For Color Combos382 palette
 ntlcol <- c("#09090c", "#19192f",'#1212b8','#f39C12',"#ffb300",'#FFC300',"#ffe200")
-# cuts
+
+# Cuts
 cuts=c(0,1,2,5,10,20,50,100,500,65535)
 mntit <- c("NTL_Feb22","NTL_Mar22","NTL_Apr22","NTL_May22","NTL_Jun22")
+
+# Nightlights color bin
+ntlcb <- colorBin(palette = ntlcol, bins = cuts, domain = cuts)
 ```
 
 
@@ -41,7 +45,7 @@ Satellite data is a useful resource in the absence of real time data. Imagery fr
 The following images show the drastic drop in nightlights across Ukraine from February to May 2022.
 
 
-```{r message=F,echo=F,warning=FALSE}
+```{r message=F,echo=F,warning=FALSE, }
 pthuk <- "/Users/parthkhare/Desktop/CGD/Projects/Ukraine FB Mobility NTL/nightlights/Ukraine mosaics/2022"
 alras <- list.files(pthuk, pattern = ".*tif", full.names = T)
 
@@ -58,14 +62,14 @@ rjun <-  raster(alras[5])
 rjul <-  raster(alras[4])
 
 
-levelplot(rjan, at=cuts, par.settings=rasterTheme(ntlcol),main='Feb 2022',
-          sub=expression(Watt/cm2/sr),pretty=T,maxpixels = 1e6, margin=F)
-mapView(rjan, col.regions = ntlcol, at=cuts, maxpixels=8222466, alpha.regions = 0.9, zoom=6)
+levelplot(rjan, at=cuts, par.settings=rasterTheme(ntlcol),main='Before: Jan 2022',
+          sub=expression(Watt/cm2/sr),pretty=T,maxpixels = 8222466, margin=F)
+# mapView(rjan, col.regions = ntlcol, at=cuts, maxpixels=8222466, alpha.regions = 0.9, zoom=6)
 
 
-levelplot(rmay, at=cuts, par.settings=rasterTheme(ntlcol),main='May 2022',
-          sub=expression(Watt/cm2/sr),pretty=T,maxpixels = 1e6, margin=F)
-mapView(rmay, col.regions = ntlcol, at=cuts, maxpixels=8222466, alpha.regions = 0.9,zoom=6)
+levelplot(rmay, at=cuts, par.settings=rasterTheme(ntlcol),main='After: May 2022',
+          sub=expression(Watt/cm2/sr),pretty=T,maxpixels = 8222466, margin=F)
+# mapView(rmay, col.regions = ntlcol, at=cuts, maxpixels=8222466, alpha.regions = 0.9,zoom=6)
 
 ```
 Blue and yellow lit regions represent major cities 
@@ -74,15 +78,27 @@ Blue and yellow lit regions represent major cities
 <br />
 
 
+Select layers manually
+
 ```{r message=F,echo=F,warning=FALSE}
-
+# Method II: leaflet
+leaflet() %>% addTiles() %>%
+  addProviderTiles(providers$CartoDB.Positron, group = "Carto") %>%
+  addRasterImage(rjan, colors = ntlcol, opacity = 0.9, group="Jan-2022") %>%
+  addRasterImage(rfeb, colors = ntlcol, opacity = 0.9, group="Feb-2022") %>%
+  addRasterImage(rmar, colors = ntlcol, opacity = 0.9, group="Mar-2022") %>%
+  addRasterImage(rapr, colors = ntlcol, opacity = 0.9, group="Apr-2022") %>%
+  addRasterImage(rmay, colors = ntlcol, opacity = 0.9, group="May-2022") %>%
+  addLayersControl(overlayGroups = c("Jan-2022","Feb-2022","Mar-2022","Apr-2022","May-2022"),
+                   options = layersControlOptions(collapsed = FALSE)) %>% 
+  hideGroup(c("Feb-2022", "Mar-2022","Apr-2022","May-2022"))  %>%
+  addLegend(pal=ntlcb, values=cuts, title = "Where to rebuild after the war: Ukraine Nightlights")
 ```
-
 
 
 Drop in nightlights across months
 
-![](UkrNtl_lres.gif)  
+![](UkrNtl_lres.gif)
 
 
 - NOTE 
