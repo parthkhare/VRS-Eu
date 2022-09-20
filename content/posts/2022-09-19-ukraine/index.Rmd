@@ -19,7 +19,7 @@ date: '2022-09-15'
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE)
 library(ggplot2); library(data.table);library(fixest);library(raster);library(rasterVis)
-library(animation)
+library(animation); library(mapview)
 options(scipen=99)
 
 # For ColorCombos382 palette
@@ -55,39 +55,30 @@ rjul <-  raster(alras[4])
 
 
 levelplot(rjan, at=cuts, par.settings=rasterTheme(ntlcol),main='Feb 2022',
-          sub=expression(Watt/cm2/sr),pretty=T,maxpixels = 1e6, margin=F)
+          sub=expression(Watt/cm2/sr),pretty=T,maxpixels = 1e6, margin=T)
+mapView(rjan, col.regions = ntlcol, at=cuts, maxpixels=1e6, alpha.regions = 0.9)
+
 
 levelplot(rmay, at=cuts, par.settings=rasterTheme(ntlcol),main='May 2022',
-          sub=expression(Watt/cm2/sr),pretty=T,maxpixels = 1e6, margin=F)
+          sub=expression(Watt/cm2/sr),pretty=T,maxpixels = 1e6, margin=T)
+mapView(rjan, col.regions = ntlcol, at=cuts, maxpixels=1e6, alpha.regions = 0.9)
+
+```
+Blue and yellow lit regions represent major cities 
+
+<br />
+<br />
+
+
+```{r message=F,echo=F,warning=FALSE}
 
 ```
 
 
-<!-- <br />  -->
-<!-- <br />  -->
 
-#### Changes across the months
+Drop in nightlightslights across months
 
-![](UkrNtl_lres.gif)
-
-<!-- ```{r message=F,echo=F,warning=FALSE} -->
-<!-- mntit <- c("NTL_Feb22","NTL_Mat22","NTL_Apr22","NTL_May22","NTL_Jun22") -->
-
-<!-- s <- stack(x=c(rjan, rfeb, rmar, rapr, rmay)) -->
-
-<!-- # raster animation save gif -->
-<!-- saveGIF({ -->
-<!--   for(i in c(1:nlayers(s))) -->
-<!--   { -->
-<!--     l <- levelplot(s[[i]], at=cuts,par.settings=rasterTheme(ntlcol),maxpixels = 1e5, -->
-<!--                    margin=FALSE, main=mntit[i], sub=expression(Watt/cm2/sr))  -->
-<!--     # l <- levelplot(s[[i]], par.settings=rasterTheme(ntlcol),margin=FALSE, main=mntit[i]) -->
-<!--     plot(l) -->
-<!--   } -->
-<!-- }, interval=2, movie.name="UkrNtl_lres.gif") -->
-
-<!-- ``` -->
-
+![](UkrNtl_lres.gif)  
 
 
 - NOTE 
