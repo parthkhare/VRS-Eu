@@ -1,17 +1,17 @@
 ---
-title: Nightlights in Ukraine
-author: R package build
-date: '2021-10-14'
-slug: []
-categories: []
-tags: []
-description: ~
-toc: yes
-authors: []
-series: []
-lastmod: '2021-10-14T21:22:57-04:00'
-featuredVideo: ~
-featuredImage: /ukraine/UkrJan2022.png
+title: Where to rebuild after the War
+author: Parth Khare CGD
+date: '2022-09-15'
+# slug: []
+# categories: []
+# tags: []
+# description: ~
+# toc: yes
+# authors: []
+# series: []
+# lastmod: '2022-09-15T21:22:57-04:00'
+# featuredVideo: https://www.youtube.com/watch?v=uUFh3bpq-bA
+# featuredImage: /ukraine/UkrJan2022.png
 ---
 
 
@@ -19,16 +19,27 @@ featuredImage: /ukraine/UkrJan2022.png
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE)
 library(ggplot2); library(data.table);library(fixest);library(raster);library(rasterVis)
+library(animation)
 options(scipen=99)
 
 # For ColorCombos382 palette
-ntlcol <- c("#09090c", "#19192f",'#0000a6' ,"#ffb300", "#ffe200")
+ntlcol <- c("#09090c", "#19192f",'#0000a6' ,"#ffb300",'#FFC300','#FFED18', "#ffe200")
 # cuts
 cuts=c(0,2,5,10,20,50,100,500,65535)
 
 ```
 
-## Ukraine Nightlights
+
+Each passing day of the Ukrainian invasion is taking a toll on not only the lives but the future livelihood of millions. With optimism on war nearing its end, its important to start taking a stock of the extent of loss in public infrastructure, natural-resources and worst hit regions. Doing so, will not only help in targeting focused reparative efforts but also save time in policy reforms till surveys and ground assessments are undertaken.
+
+Satellite data is a useful resource in the absence of real time data. Imagery from daytime satellites have already proven to be useful learning of the initial [encroachment by Russian army](https://www.space.com/russia-ukraine-invasion-satellite-photos), and how Russia strategically targeted [Ukrainian grains](https://www.wired.com/story/satellites-ukraine-russia-grain/). Nightlights can help in assessing the extent of economic disruption from loss in electrification, demolition of houses, public infrastructure.
+
+
+
+## Assessing impact of war in Ukarine from nightlights
+
+The following images show the drastic drop in nightlights across Ukraine from February to May 2022.
+
 
 ```{r message=F,echo=F,warning=FALSE}
 pthuk <- "/Users/parthkhare/Desktop/CGD/Projects/Ukraine FB Mobility NTL/nightlights/Ukraine mosaics/2022"
@@ -55,13 +66,31 @@ levelplot(rmay, at=cuts, par.settings=rasterTheme(ntlcol),main='May 2022',
 <!-- <br />  -->
 <!-- <br />  -->
 
+#### Changes across the months
 
-## Absense of income data
+![](UkrNtl_lres.gif)
+
+<!-- ```{r message=F,echo=F,warning=FALSE} -->
+<!-- mntit <- c("NTL_Feb22","NTL_Mat22","NTL_Apr22","NTL_May22","NTL_Jun22") -->
+
+<!-- s <- stack(x=c(rjan, rfeb, rmar, rapr, rmay)) -->
+
+<!-- # raster animation save gif -->
+<!-- saveGIF({ -->
+<!--   for(i in c(1:nlayers(s))) -->
+<!--   { -->
+<!--     l <- levelplot(s[[i]], at=cuts,par.settings=rasterTheme(ntlcol),maxpixels = 1e5, -->
+<!--                    margin=FALSE, main=mntit[i], sub=expression(Watt/cm2/sr))  -->
+<!--     # l <- levelplot(s[[i]], par.settings=rasterTheme(ntlcol),margin=FALSE, main=mntit[i]) -->
+<!--     plot(l) -->
+<!--   } -->
+<!-- }, interval=2, movie.name="UkrNtl_lres.gif") -->
+
+<!-- ``` -->
 
 
-<!-- - Addressing negative values: addressing negative months across districts -->
-<!--   - V1: Replacing negative values for months with 0 at district level and subsequently aggregating to country level  -->
-<!--   - V2: Replacing negative values for months with positive value from preceding months at district level and  -->
 
-
-
+- NOTE 
+  - It should be remembered that lights are not exactly income. While they can be used and have proven to be a helpful proxy for estimating economic growth. 
+  - Nightlight measures radiance of light in Watt/cm2/sr, and all the maps here use the same legend for comparing results ovetime
+  - Nightlights data for month of June seems to been biased by external noise from shells and not included here
