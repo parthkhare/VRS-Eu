@@ -55,13 +55,13 @@ rjul <-  raster(alras[4])
 
 
 levelplot(rjan, at=cuts, par.settings=rasterTheme(ntlcol),main='Feb 2022',
-          sub=expression(Watt/cm2/sr),pretty=T,maxpixels = 1e6, margin=T)
-mapView(rjan, col.regions = ntlcol, at=cuts, maxpixels=1e6, alpha.regions = 0.9)
+          sub=expression(Watt/cm2/sr),pretty=T,maxpixels = 1e6, margin=F)
+mapView(rjan, col.regions = ntlcol, at=cuts, maxpixels=1e6, alpha.regions = 0.9, zoom=6)
 
 
 levelplot(rmay, at=cuts, par.settings=rasterTheme(ntlcol),main='May 2022',
-          sub=expression(Watt/cm2/sr),pretty=T,maxpixels = 1e6, margin=T)
-mapView(rjan, col.regions = ntlcol, at=cuts, maxpixels=1e6, alpha.regions = 0.9)
+          sub=expression(Watt/cm2/sr),pretty=T,maxpixels = 1e6, margin=F)
+mapView(rmay, col.regions = ntlcol, at=cuts, maxpixels=1e6, alpha.regions = 0.9,zoom=6)
 
 ```
 Blue and yellow lit regions represent major cities 
