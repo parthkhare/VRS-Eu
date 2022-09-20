@@ -23,10 +23,10 @@ library(animation); library(mapview)
 options(scipen=99)
 
 # For ColorCombos382 palette
-ntlcol <- c("#09090c", "#19192f",'#0000a6' ,"#ffb300",'#FFC300','#FFED18', "#ffe200")
+ntlcol <- c("#09090c", "#19192f",'#1212b8','#f39C12',"#ffb300",'#FFC300',"#ffe200")
 # cuts
-cuts=c(0,2,5,10,20,50,100,500,65535)
-
+cuts=c(0,1,2,5,10,20,50,100,500,65535)
+mntit <- c("NTL_Feb22","NTL_Mar22","NTL_Apr22","NTL_May22","NTL_Jun22")
 ```
 
 
@@ -46,22 +46,26 @@ pthuk <- "/Users/parthkhare/Desktop/CGD/Projects/Ukraine FB Mobility NTL/nightli
 alras <- list.files(pthuk, pattern = ".*tif", full.names = T)
 
 rjan <-  raster(alras[3])
+proj4string(rjan) <- CRS("+init=epsg:4326")
+
 rfeb <-  raster(alras[2])
 rmar <-  raster(alras[6])
 rapr <-  raster(alras[1])
 rmay <-  raster(alras[7])
+proj4string(rmay) <- CRS("+init=epsg:4326")
+
 rjun <-  raster(alras[5])
 rjul <-  raster(alras[4])
 
 
 levelplot(rjan, at=cuts, par.settings=rasterTheme(ntlcol),main='Feb 2022',
           sub=expression(Watt/cm2/sr),pretty=T,maxpixels = 1e6, margin=F)
-mapView(rjan, col.regions = ntlcol, at=cuts, maxpixels=1e6, alpha.regions = 0.9, zoom=6)
+mapView(rjan, col.regions = ntlcol, at=cuts, maxpixels=8222466, alpha.regions = 0.9, zoom=6)
 
 
 levelplot(rmay, at=cuts, par.settings=rasterTheme(ntlcol),main='May 2022',
           sub=expression(Watt/cm2/sr),pretty=T,maxpixels = 1e6, margin=F)
-mapView(rmay, col.regions = ntlcol, at=cuts, maxpixels=1e6, alpha.regions = 0.9,zoom=6)
+mapView(rmay, col.regions = ntlcol, at=cuts, maxpixels=8222466, alpha.regions = 0.9,zoom=6)
 
 ```
 Blue and yellow lit regions represent major cities 
@@ -76,7 +80,7 @@ Blue and yellow lit regions represent major cities
 
 
 
-Drop in nightlightslights across months
+Drop in nightlights across months
 
 ![](UkrNtl_lres.gif)  
 
