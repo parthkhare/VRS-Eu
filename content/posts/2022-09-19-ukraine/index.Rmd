@@ -32,16 +32,14 @@ mntit <- c("NTL_Feb22","NTL_Mar22","NTL_Apr22","NTL_May22","NTL_Jun22")
 ```
 
 
-Each passing day of the Ukrainian invasion is taking a toll on not only the lives but the future livelihood of millions. With optimism on war nearing its end, its important to start taking a stock of the extent of loss in public infrastructure, natural-resources and worst hit regions. Doing so, will not only help in targeting focused reparative efforts but also save time in policy reforms till surveys and ground assessments are undertaken.
+Each passing day of the Ukrainian invasion is taking a toll on not only the lives but the future livelihood of millions. With optimism on war nearing its end, its important to start taking stock of the extent of loss in public infrastructure, natural-resources and identifying worst hit regions. Doing so, will not only help in targeting focused reparative efforts but also save time in policy response till surveys and ground assessments are undertaken and collected.
 
-Satellite data is a useful resource in the absence of real time data. Imagery from daytime satellites have already proven to be useful learning of the initial [encroachment by Russian army](https://www.space.com/russia-ukraine-invasion-satellite-photos), and how Russia strategically targeted [Ukrainian grains](https://www.wired.com/story/satellites-ukraine-russia-grain/). Nightlights can help in assessing the extent of economic disruption from loss in electrification, demolition of houses, public infrastructure.
+In the absence of real time data, satellite data can be a handy proxy Imagery from daytime satellites have already proven to be useful in preventive mobilization before the invasion started [encroachment by Russian army](https://www.space.com/russia-ukraine-invasion-satellite-photos), learning of Russia strategically targeted [Ukrainian grains](https://www.wired.com/story/satellites-ukraine-russia-grain/). Data from nightlights can further help in assessing the extent of economic disruption from loss in electrification, demolition of private property and public infrastructure.
 
 
 
 ## Assessing impact of war in Ukarine from nightlights
-
-The following images show the drastic drop in nightlights across Ukraine from January to May 2022.
-
+The following maps show the drastic drop in nightlights across Ukraine from January to May 2022.
 
 ```{r message=F,echo=F,warning=FALSE, }
 pthuk <- "/Users/parthkhare/Desktop/CGD/Projects/Ukraine FB Mobility NTL/nightlights/Ukraine mosaics/2022"
@@ -73,7 +71,7 @@ levelplot(rmay, at=cuts, par.settings=rasterTheme(ntlcol),main='After: May 2022'
 ```
 <br />
 
-It can be clearly seen that the lights intensity in highly lit (bright yellow) regions corresponding to cities Kyiv, Lyiv, Kharkhiv have drastically reduced since January and continue on a downward trend. Milder yello/orange regions capturing street lights from highways has almost disappeared, matching with [ongoing reports](https://www.kyivpost.com/ukraine-politics/during-100-days-invaders-destroy-24000-km-of-roads-300-bridges.html) from the ground. Lights from dark blue regions capturing small settlement have almost disappeared.
+It can be seen that light intensity in highly-lit (bright yellow) regions, corresponding to cities including Kyiv, Lyiv, Kharkhiv have drastically reduced since January and continue on a downward trend. Milder yellow/orange regions potnetially capturing street lights from highways have almost disappeared, matching with [ongoing narrative ](https://www.kyivpost.com/ukraine-politics/during-100-days-invaders-destroy-24000-km-of-roads-300-bridges.html) from the ground. Lights from dark blue regions capturing small settlement have almost disappeared.
 
 
 
@@ -82,18 +80,20 @@ It can be clearly seen that the lights intensity in highly lit (bright yellow) r
 
 
 
-## Electricity Demand
+## Checking for confounders: Electricity Demand
 
-Drop in lights match with the drop in monthly [electricity demand estimated by the IEA](https://www.iea.org/data-and-statistics/data-tools/ukraine-real-time-electricity-data-explorer). This is a helpful validation as nightlights are often confounded by various [biophysical, seasonal noise](https://nightlights-econ.netlify.app/posts/2021-10-14-cleaning-variants/) However,comparing with electricity demand confirms the perception, direction, and magnitude of the fall.
+Its highly likely that the such drastic reduction in light could be driven by a.) cloud-cover [biophysical, seasonal noise](https://nightlights-econ.netlify.app/posts/2021-10-14-cleaning-variants/) and b.) [strategic blackouts](https://www.nytimes.com/2022/09/12/world/ukraine-power-blackout.html) to stave off air-strikes. Assuming that the blackouts were not consistent across all the months, checking with electricity demand could potentially help in account for this. Following is chart of monthly [electricity demand estimated by the IEA](https://www.iea.org/data-and-statistics/data-tools/ukraine-real-time-electricity-data-explorer)
+
 
 ![](/ukraine/Ukrelecdd.png)
-
-(source)[https://www.iea.org/data-and-statistics/data-tools/ukraine-real-time-electricity-data-explorer]
-
+[source](https://www.iea.org/data-and-statistics/data-tools/ukraine-real-time-electricity-data-explorer)
 
 
+It can be seen that the drop in lights match with the drop in monthly electricity, with a stark drop in May 2022 onwards and marginally decreasing levels after April. This seems to confirm the perception, direction, and magnitude of the fall. It can also be seen that the drop in lights is pronounced in eastern part of the country coinciding with  Possibly implying that the drop in lights was not just due to cloud cover or blackouts but largely from loss in infrastructure and breakdown of economic activity. 
 
-### Interactive map
+
+
+### Monthly nightlights map
 
 
 ```{r message=F,echo=F,warning=FALSE}
@@ -127,7 +127,8 @@ Drop in nightlights across months
 ![](UkrNtl_lres.gif)
 
 
-NOTE 
+### Caveat: Limitation on inferences to be drawn from nightlights
+NOTE
   - It should be remembered that lights are not exactly income. While they can be used and have proven to be a helpful proxy for estimating economic growth. 
   - Nightlight measures radiance of light in Watt/cm2/sr, and all the maps here use the same legend for comparing results ovetime
   - Nightlights data for month of June seems to been biased by external noise from bombing and is not included here

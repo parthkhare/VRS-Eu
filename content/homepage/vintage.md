@@ -1,7 +1,7 @@
 ---
 title: Vintage
 draft: false
-slogan: Looking at stars on earth, soothsaying from constellations on growth.
+slogan: "Night is pleasing because, like memory, it erases idle details"~ Borges
 imgLeft: ntlstock/NTL-12-16Ind.jpg
 imgRight: ntlstock/NTL-12-16Kor.jpg
 
