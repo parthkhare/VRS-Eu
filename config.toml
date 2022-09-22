@@ -1,8 +1,7 @@
 theme = "hugo-eureka"
 baseURL = '/'
 languageCode = 'en-us'
-title = 'Nightlight-Dev'
+title = 'Nightlights-Dev'
 canonifyurls = true
 relativeurls = true
 markup.goldmark.renderer.unsafe = true
-
