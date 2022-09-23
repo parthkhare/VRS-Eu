@@ -96,8 +96,40 @@ It can be seen that the drop in lights match with the drop in monthly electricit
 
 
 
-### Monthly nightlights map
+### Check II: Comparing with 2020-2021 Nightlights data 
 
+```{r message=F, echo=F, warning=F}
+
+# 2021 Data
+# ---------------------------
+pthuk21 <- "/Users/parthkhare/Desktop/CGD/Projects/Ukraine FB Mobility NTL/nightlights/Ukraine mosaics/2021"
+alras21 <- list.files(pthuk21, pattern = ".*tif", full.names = T)
+
+# Reas rasters 2021
+rjan21 <-  raster(alras21[3])
+rfeb21 <-  raster(alras21[2])
+rmar21 <-  raster(alras21[6])
+rapr21 <-  raster(alras21[1])
+rmay21 <-  raster(alras21[7])
+rjun21 <-  raster(alras21[5])
+rjul21 <-  raster(alras21[4])
+
+
+# 2021 Map
+# ---------------------------
+cuts=c(0,1,2,5,10,20,50,100,500,65535)
+levelplot(rjan21, at=cuts, par.settings=rasterTheme(ntlcol),
+          sub=expression(Watt/cm2/sr), margin=F, maxpixels = 1e6)
+
+levelplot(rmay21, at=cuts, par.settings=rasterTheme(ntlcol),
+          sub=expression(Watt/cm2/sr), margin=F, maxpixels = 1e6)
+```
+
+
+
+
+
+### Monthly nightlights map
 
 ```{r message=F,echo=F,warning=FALSE}
 # Method II: leaflet
@@ -122,7 +154,6 @@ leaflet() %>% addTiles() %>%
 
 <br />
 <br />
-
 
 
 Drop in nightlights across months
