@@ -59,12 +59,12 @@ rjul <-  raster(alras[4])
 
 
 # Plot January raster 
-levelplot(rjan, at=cuts, par.settings=rasterTheme(ntlcol),main='Before: Jan 2022',
+levelplot(rjan, at=cuts, par.settings=rasterTheme(ntlcol),main='Before Invasion: Jan 2022',
           sub=expression(Watt/cm2/sr),pretty=T,maxpixels = 8222466, margin=F)
 # mapView(rjan, col.regions = ntlcol, at=cuts, maxpixels=8222466, alpha.regions = 0.9, zoom=6)
 
 # Plot May raster 
-levelplot(rmay, at=cuts, par.settings=rasterTheme(ntlcol),main='After: May 2022',
+levelplot(rmay, at=cuts, par.settings=rasterTheme(ntlcol),main='After Invasion: May 2022',
           sub=expression(Watt/cm2/sr),pretty=T,maxpixels = 8222466, margin=F)
 # mapView(rmay, col.regions = ntlcol, at=cuts, maxpixels=8222466, alpha.regions = 0.9,zoom=6)
 
@@ -80,7 +80,7 @@ It can be seen that light intensity in highly-lit (bright yellow) regions, corre
 
 
 
-## Checking for confounders: Electricity Demand
+## Checking confounders I (Blackouts): Electricity Demand
 
 Its highly likely that the such drastic reduction in light could be driven by a.) cloud-cover [biophysical, seasonal noise](https://nightlights-econ.netlify.app/posts/2021-10-14-cleaning-variants/) and b.) [strategic blackouts](https://www.nytimes.com/2022/09/12/world/ukraine-power-blackout.html) to stave off air-strikes. Assuming that the blackouts were not consistent across all the months, checking with electricity demand could potentially help in account for this. Following is chart of monthly [electricity demand estimated by the IEA](https://www.iea.org/data-and-statistics/data-tools/ukraine-real-time-electricity-data-explorer)
 
@@ -96,7 +96,7 @@ It can be seen that the drop in lights match with the drop in monthly electricit
 
 
 
-### Check II: Comparing with 2020-2021 Nightlights data 
+## Checking confounders I (Seasonal Noise): Compare with 2021 Data
 
 ```{r message=F, echo=F, warning=F}
 
@@ -118,11 +118,14 @@ rjul21 <-  raster(alras21[4])
 # 2021 Map
 # ---------------------------
 cuts=c(0,1,2,5,10,20,50,100,500,65535)
-levelplot(rjan21, at=cuts, par.settings=rasterTheme(ntlcol),
-          sub=expression(Watt/cm2/sr), margin=F, maxpixels = 1e6)
 
-levelplot(rmay21, at=cuts, par.settings=rasterTheme(ntlcol),
-          sub=expression(Watt/cm2/sr), margin=F, maxpixels = 1e6)
+levelplot(rjan21, at=cuts, par.settings=rasterTheme(ntlcol),main='Jan 2021',
+          sub=expression(Watt/cm2/sr),pretty=T,maxpixels = 8222466, margin=F)
+
+levelplot(rmay21, at=cuts, par.settings=rasterTheme(ntlcol),main='May 2021',
+          sub=expression(Watt/cm2/sr),pretty=T,maxpixels = 8222466, margin=F)
+# levelplot(rjul21, at=cuts, par.settings=rasterTheme(ntlcol),main='July 2021',
+#           sub=expression(Watt/cm2/sr),pretty=T,maxpixels = 8222466, margin=F)
 ```
 
 
