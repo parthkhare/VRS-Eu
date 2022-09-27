@@ -55,7 +55,8 @@ Despite its success as a useful proxy, The Defense Meteorological Satellite Prog
 
 Tldr: VIIRS or Blackmable do not explain country level growth at least much as DMSP explained. However, despite this many localized  studies still exploit this association by using VIIRS as a proxy for measuring effectiveness of various development interventions. Why is it that despite improved data, is there an attenutation in the association between nightlights-economic growth, or were measuring it wrong all along? 
 
-
+![](/ntlstock/Gibson_VIIRS_pubs.png)
+Source: Gibson et al (2021)
 
 
 
