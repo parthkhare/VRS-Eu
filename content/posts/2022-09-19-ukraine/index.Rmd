@@ -32,10 +32,11 @@ mntit <- c("NTL_Feb22","NTL_Mar22","NTL_Apr22","NTL_May22","NTL_Jun22")
 ```
 
 
-Each passing day of the Ukrainian invasion is taking a toll on not only the lives but the future livelihood of millions. With optimism on war nearing its end, its important to start taking stock of the extent of loss in public infrastructure, natural-resources and identifying worst hit regions. Doing so, will not only help in targeting focused reparative efforts but also save time in policy response till surveys and ground assessments are undertaken and collected.
+Each passing day of the Russian invasion in Ukraine is taking a toll on not only on the lives but the future livelihood of millions. At least 1/3rd of its population ([over 12 million](https://news.un.org/en/focus/ukraine) ) have migrated since February, 2022, most of its essential services are halted while schools and hospitals are being bombed. By a World Bank estimate [Ukraine's economy to shrink by 45%](https://www.worldbank.org/en/news/press-release/2022/04/10/russian-invasion-to-shrink-ukraine-economy-by-45-percent-this-year)
+
+While efforts are being made to address the first order issue of stopping the invasion, it is also important to start paying attention to what Ukraine might look like after the war and take a stock of the extent of loss in infrastructure, natural-resources and identify worst hit regions. Doing so, will not only help in targeting focused reparative efforts but also save time in policy response till surveys and ground assessments are undertaken and collected.
 
 In the absence of real time data, satellite data can be a handy proxy Imagery from daytime satellites have already proven to be useful in preventive mobilization before the invasion started [encroachment by Russian army](https://www.space.com/russia-ukraine-invasion-satellite-photos), learning of Russia strategically targeted [Ukrainian grains](https://www.wired.com/story/satellites-ukraine-russia-grain/). Data from nightlights can further help in assessing the extent of economic disruption from loss in electrification, demolition of private property and public infrastructure.
-
 
 
 ## Assessing impact of war in Ukarine from nightlights
@@ -159,15 +160,15 @@ leaflet() %>% addTiles() %>%
 <br />
 
 
-Drop in nightlights across months
+<!-- Drop in nightlights across months -->
 
-![](UkrNtl_lres.gif)
+<!-- ![](UkrNtl_lres.gif) -->
 
 
 ### Caveat: Limitation on inferences to be drawn from nightlights
 NOTE
-  - It should be remembered that lights are not exactly income. While they can be used and have proven to be a helpful proxy for estimating economic growth. 
-  - Nightlight measures radiance of light in Watt/cm2/sr, and all the maps here use the same legend for comparing results ovetime
-  - Nightlights data for month of June seems to been biased by external noise from bombing and is not included here
+  - Lights are not equivalent to income. While several studies have used earlier variant of Nightlights (DMSP) as a proxy for assessing economic growth, there are only a few studies finding so using latest nightlights product (VIIRS) 
   - Nightlights map can be misleading with different color labels, the labels used here are based 
+use the same value thresholds across all maps (Nightlight measures radiance of light in Watt/cm2/sr)
+  - Nightlights data for month of June seems to been biased by external noise and is not included here
 
