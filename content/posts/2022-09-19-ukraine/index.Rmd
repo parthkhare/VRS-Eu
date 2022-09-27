@@ -37,7 +37,7 @@ Each passing day of the Russian invasion in Ukraine is taking a toll on not only
 
 In the absence of real time data, open source intelligence from satellite imagery can be helpful in drawing timely insights. A constellation of small nano-satellites are already providing crisp images of convoys, damaged airfields and bombed building on a real time basis. High resolution imagery from daytime satellites have proven useful in taking preventive measure. For instance, Ukraine's [army mobilization before the invasion by Russian army](https://www.space.com/russia-ukraine-invasion-satellite-photos), or preemptive food grain stocking by learning of Russia's strategically targeting of [Ukrainian grains](https://www.wired.com/story/satellites-ukraine-russia-grain/). 
 
-While daytime imagery help planing and strategy, data from nightlights can help in assessing the extent and geography of economic disruption from loss in electrification, demolition of private property and public infrastructure. Extracting publicaly accessible imagery from [NASA](https://blackmarble.gsfc.nasa.gov/), the following maps explore how the lights have changed during the course of Ukranain war.
+While daytime imagery help planing and strategy, data from nightlights can help in assessing the extent and geography of economic disruption from loss in electrification, demolition of private property and public infrastructure. Extracting publicly accessible imagery from [NASA](https://blackmarble.gsfc.nasa.gov/), the following maps explore how the lights have changed during the course of Ukranain war.
 
 
 
@@ -177,7 +177,6 @@ Overall, it might be tedious to quantify an exact measure of economic loss from 
 
 
 <!-- Drop in nightlights across months -->
-
 <!-- ![](UkrNtl_lres.gif) -->
 
 
