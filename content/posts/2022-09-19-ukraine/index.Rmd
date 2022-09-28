@@ -22,13 +22,14 @@ library(ggplot2); library(data.table);library(fixest);library(raster);library(ra
 library(animation); library(mapview); library(leaflet); library(RColorBrewer)
 options(scipen=99)
 
-# For Color Combos382 palette
-ntlcol <- c("#09090c", "#19192f",'#1212b8','#f39C12',"#ffb300",'#FFC300',"#ffe200")
-
-# Cuts
-cuts=c(0,1,2,5,10,20,50,100,500,65535)
-mntit <- c("NTL_Feb22","NTL_Mar22","NTL_Apr22","NTL_May22","NTL_Jun22")
-
+# Global varibales
+# ---------------------------
+# Name rasters for gif
+mntit <- c("NTL_Jan22","NTL_Feb22","NTL_Mar22","NTL_Apr22","NTL_May22")
+# For ColorCombos382 palette
+ntlcol <- c("#09090c", "#19192f",'#1212b8' ,'#f39C12',"#ffb300",'#FFC300',"#ffe200")
+# cuts
+cuts=c(0,2,5,10,20,50,100,500,30000)
 ```
 
 ## Post-War Ukraine
@@ -45,31 +46,44 @@ While daytime imagery help planing and strategy, data from nightlights can help 
 The following maps show the drastic drop in nightlights across Ukraine from January to May 2022.
 
 ```{r message=F,echo=F,warning=FALSE, }
-pthuk <- "/Users/parthkhare/Desktop/CGD/Projects/Ukraine FB Mobility NTL/nightlights/Ukraine mosaics/2022"
-alras <- list.files(pthuk, pattern = ".*tif", full.names = T)
+# Path for rasters mosaics for Ukraine
+# -----------------
+pthuk22 <- "/Users/parthkhare/Desktop/CGD/Projects/Ukraine FB Mobility NTL/nightlights/Ukraine mosaic_65535rem/2022"
+alras22 <- list.files(pthuk22, pattern = ".*tif", full.names = T)
 
-rjan <-  raster(alras[3])
-proj4string(rjan) <- CRS("+init=epsg:4326")
-
-rfeb <-  raster(alras[2])
-rmar <-  raster(alras[6])
-rapr <-  raster(alras[1])
-rmay <-  raster(alras[7])
-proj4string(rmay) <- CRS("+init=epsg:4326")
-
-rjun <-  raster(alras[5])
-rjul <-  raster(alras[4])
-
+# Read Rasters
+# -----------------
+rjan22 <-  raster(alras22[3])
+proj4string(rjan22) <- CRS("+init=epsg:4326")
+rfeb22 <-  raster(alras22[2])
+proj4string(rfeb22) <- CRS("+init=epsg:4326")
+rmar22 <-  raster(alras22[6])
+proj4string(rmar22) <- CRS("+init=epsg:4326")
+rapr22 <-  raster(alras22[1])
+proj4string(rapr22) <- CRS("+init=epsg:4326")
+rmay22 <-  raster(alras22[7])
+proj4string(rmay22) <- CRS("+init=epsg:4326")
+rjun22 <-  raster(alras22[5])
+proj4string(rjun22) <- CRS("+init=epsg:4326")
+rjul22 <-  raster(alras22[4])
+proj4string(rjul22) <- CRS("+init=epsg:4326")
 
 # Plot January raster 
-levelplot(rjan, at=cuts, par.settings=rasterTheme(ntlcol),main='Before Invasion: Jan 2022',
+# -----------------
+levelplot(rjan22, at=cuts, par.settings=rasterTheme(ntlcol),main='Before Invasion: Jan 2022',
           sub=expression(Watt/cm2/sr),pretty=T,maxpixels = 8222466, margin=F)
 # mapView(rjan, col.regions = ntlcol, at=cuts, maxpixels=8222466, alpha.regions = 0.9, zoom=6)
 
 # Plot May raster 
-levelplot(rmay, at=cuts, par.settings=rasterTheme(ntlcol),main='After Invasion: May 2022',
+# -----------------
+levelplot(rmay22, at=cuts, par.settings=rasterTheme(ntlcol),main='After Invasion: May 2022',
           sub=expression(Watt/cm2/sr),pretty=T,maxpixels = 8222466, margin=F)
 # mapView(rmay, col.regions = ntlcol, at=cuts, maxpixels=8222466, alpha.regions = 0.9,zoom=6)
+
+# Plot July raster 
+# -----------------
+levelplot(rjul22, at=cuts, par.settings=rasterTheme(ntlcol),main='After Invasion: July 2022',
+          sub=expression(Watt/cm2/sr),pretty=T,maxpixels = 8222466, margin=F)
 
 ```
 <br />
@@ -108,10 +122,9 @@ It can be seen that the drop in lights match with the drop in monthly electricit
 Nightlights are also obfuscated by cloud-cover. Although Ukraine experience rainy weather in October and November, there still might be noise from biophysical seasonality. Comparing with 2021 nightlights imagery can help in learning if the drops in lights from during the war were not merely caused by seasonal aberrations.
 
 ```{r message=F, echo=F, warning=F}
-
-# 2021 Data
+# Read rasters for Ukraine 2021
 # ---------------------------
-pthuk21 <- "/Users/parthkhare/Desktop/CGD/Projects/Ukraine FB Mobility NTL/nightlights/Ukraine mosaics/2021"
+pthuk21 <- "/Users/parthkhare/Desktop/CGD/Projects/Ukraine FB Mobility NTL/nightlights/Ukraine mosaic_65535rem/2021"
 alras21 <- list.files(pthuk21, pattern = ".*tif", full.names = T)
 
 # Reas rasters 2021
@@ -123,18 +136,13 @@ rmay21 <-  raster(alras21[7])
 rjun21 <-  raster(alras21[5])
 rjul21 <-  raster(alras21[4])
 
-
 # 2021 Map
 # ---------------------------
-cuts=c(0,1,2,5,10,20,50,100,500,65535)
-
 levelplot(rjan21, at=cuts, par.settings=rasterTheme(ntlcol),main='Jan 2021',
           sub=expression(Watt/cm2/sr),pretty=T,maxpixels = 8222466, margin=F)
 
-levelplot(rmay21, at=cuts, par.settings=rasterTheme(ntlcol),main='May 2021',
+levelplot(rjul21, at=cuts, par.settings=rasterTheme(ntlcol),main='July 2021',
           sub=expression(Watt/cm2/sr),pretty=T,maxpixels = 8222466, margin=F)
-# levelplot(rjul21, at=cuts, par.settings=rasterTheme(ntlcol),main='July 2021',
-#           sub=expression(Watt/cm2/sr),pretty=T,maxpixels = 8222466, margin=F)
 ```
 
 
@@ -148,22 +156,25 @@ As a final check, the interactive map below plots nightlights across each month 
 
 ```{r message=F,echo=F,warning=FALSE}
 # Method II: leaflet
-cuts2=c(0,2,5,10,20,50,100,500,65535)
+cuts2=c(0,2,5,10,20,50,100,500,30000)
 
 # Nightlights color bin
 ntlcb <- colorBin(palette = ntlcol, bins = cuts2, domain = cuts2)
 
-
+# Make maps
 leaflet() %>% addTiles() %>%
   addProviderTiles(providers$CartoDB.Positron, group = "Carto") %>%
-  addRasterImage(rjan, at=cuts2, colors = ntlcb, opacity = 0.9, group="Jan-2022") %>%
-  addRasterImage(rfeb, at=cuts2, colors = ntlcb, opacity = 0.9, group="Feb-2022") %>%
-  addRasterImage(rmar, at=cuts2, colors = ntlcb, opacity = 0.9, group="Mar-2022") %>%
-  addRasterImage(rapr, at=cuts2, colors = ntlcb, opacity = 0.9, group="Apr-2022") %>%
-  addRasterImage(rmay, at=cuts2, colors = ntlcb, opacity = 0.9, group="May-2022") %>%
-  addLayersControl(overlayGroups = c("Jan-2022","Feb-2022","Mar-2022","Apr-2022","May-2022"),
+  addRasterImage(rjan22, at=cuts2, colors = ntlcb, opacity = 0.9, group="Jan-2022") %>%
+  addRasterImage(rfeb22, at=cuts2, colors = ntlcb, opacity = 0.9, group="Feb-2022") %>%
+  addRasterImage(rmar22, at=cuts2, colors = ntlcb, opacity = 0.9, group="Mar-2022") %>%
+  addRasterImage(rapr22, at=cuts2, colors = ntlcb, opacity = 0.9, group="Apr-2022") %>%
+  addRasterImage(rmay22, at=cuts2, colors = ntlcb, opacity = 0.9, group="May-2022") %>%
+  addRasterImage(rjun22, at=cuts2, colors = ntlcb, opacity = 0.9, group="Jun-2022") %>%
+  addRasterImage(rjul22, at=cuts2, colors = ntlcb, opacity = 0.9, group="Jul-2022") %>%
+  addLayersControl(overlayGroups = c("Jan-2022","Feb-2022","Mar-2022","Apr-2022","May-2022",
+                                     "Jun-2022","Jul-2022"),
                    options = layersControlOptions(collapsed = FALSE)) %>% 
-  hideGroup(c("Feb-2022", "Mar-2022","Apr-2022","May-2022"))  %>%
+  hideGroup(c("Feb-2022", "Mar-2022","Apr-2022","May-2022","Jun-2022","Jul-2022"))  %>%
   addLegend(pal=ntlcb, values=cuts2,position = "bottomleft")
 ```
 
